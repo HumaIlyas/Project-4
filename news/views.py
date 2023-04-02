@@ -1,7 +1,17 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Post
+from .models import Category, Post
     
+
+class PostCategory(View):
+
+    def get(self, request, *args, **kwargs):
+        queryset = list(Post.objects.filter(category__category=kwargs['category'].title()))
+        context = {
+            "post_list": queryset
+        }
+        return render(request, "news/index.html", context)
+
 
 class PostList(generic.ListView):
     model = Post

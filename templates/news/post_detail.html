@@ -2,8 +2,6 @@
 
 {% block content %}
 
-{% load crispy_forms_tags %}
-
 <!-- post details -->
 <div class="masthead">
     <div class="container">
@@ -11,7 +9,8 @@
             <div class="col-md-6 masthead-text">
                 <!-- Post title -->
                 <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author will appear before | the post's created date will appear after -->
+                <!-- Post category & author will appear before | the post's created date will appear after -->
+                <h4 class="post-subtitle">{{ post.category}}</h4>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
