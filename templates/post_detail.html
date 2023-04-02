@@ -1,0 +1,93 @@
+{% extends 'news/base.html' %} 
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<!-- post details -->
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <!-- Post title -->
+                <h1 class="post-title">{{ post.title }}</h1>
+                <!-- Post author will appear before | the post's created date will appear after -->
+                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                <!-- The featured image URL will be in the src attribute -->
+                {% if "placeholder" in post.featured_image.url %}
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                {% else %}
+                <img src=" {{ post.featured_image.url }}" width="100%">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <!-- The post content will come inside the card-text -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text ">
+                    {{ post.content | safe }}
+                </p>
+
+                <!-- Post like and comment -->
+                <div class="row">
+
+                    <div class="col-1">
+                        <strong class="text-secondary"><i class="fa-regular fa-thumbs-up"></i>
+                            {{ post.number_of_likes }}
+                        </strong>
+                    </div>
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            {{ total_comments }}
+                        </strong>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 card mb-4  mt-3 ">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                <!-- A for loop inside the empty control tags to iterate through each comment in comments -->
+                {% for comment in comments %}
+                <div class="comments" style="padding: 15px;">
+                    <p class="font-weight-bold">
+                        <!-- The commenter's name -->
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            <!-- The comment's created date -->
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    <!-- The comment of the Comment will appear before the | -->
+                    {{ comment.comment | linebreaks }}
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-6 card mb-4  mt-3">
+            <div class="card-body">
+                <!-- Comment text will come here -->  
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
