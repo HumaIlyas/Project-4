@@ -43,6 +43,45 @@ body {
     color: #171719;
 }
 
+/*News Entries Column*/
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    background-color: #23BBBB;
+}
+
+.author {
+    color: white;
+    margin: 5px;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #052241;
+}
+
+.post-link:hover {
+    color: #481404;
+}
+
+.page-link {
+    color:#052241
+}
+
+.page-link:hover {
+    color:#97250e
+}
+
 /* footer */
 .social-networks > li {
     display: inline;
