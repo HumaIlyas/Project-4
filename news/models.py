@@ -43,7 +43,6 @@ class Comment(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField()
     comment = models.TextField()
-    comments = models.ManyToManyField(User, related_name='post_comment', blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
