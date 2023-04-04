@@ -127,6 +127,38 @@ body {
     color: lightgray;
 }
 
+/* login, logout & signup form */
+.black {
+    color: #171719;
+}
+
+.btn-login, 
+.btn-logout, 
+.btn-signup {
+    background-color: #138197;
+    color: #fff;
+}
+.btn-login:hover,
+.btn-logout:hover,
+.btn-signup:hover,
+.btn-login:active, 
+.btn-logout:active,
+.btn-signup:active {
+    background-color: #094c59;
+    color: #d6e2e2;
+}
+
+.link {
+    color: #0a9292;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: rgb(109, 10, 10);
+    text-decoration: underline;
+}
+
 /* footer */
 .social-networks > li {
     display: inline;
