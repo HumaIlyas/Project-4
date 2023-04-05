@@ -4,7 +4,7 @@ World News is a site for users who are interested in reading news of different c
     <img src="static/images/different-screen-sizes.jpg" alt="Website on different screen sizes">
 </div>
 
-## [View live website](https://ci-fsf-django-news.herokuapp.com/)
+## [View live website](https://project-4-world-news.herokuapp.com/)
 
 ___
 # Table of contents
@@ -296,3 +296,31 @@ The automated testing includes all the testing that is carried out by a program.
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/accessibility-mobile.jpg" alt="Accessibility on mobile">
 </div>
+
+## Manual testing
+
+### Testing User Stories
+World News website is meeting the needs of the [User stories](#user-stories) as described in the UX section of this README document.
+
+#### As a site user/site owner
+| Goals | Steps to achieve them |
+| :--- | :--- |
+| Manage posts | The site owner can create, read, update, and delete posts after login to admin account to manage the news content. The post model is created with the functions to create, read, update, and delete posts. |
+| Categorize a post | In the navigation bar is a link to news categories. After clicking on that link, a list of categories will be opened for the site user/site ownner to select the list of the news posts according to their category of interest. The category model is created with the functions to select the post category. |
+| Create draft posts | The site owner can create draft posts after login to admin account. The post model is created with the functions to create draft news and leave the contents to publish them later on. |
+| View likes | Under each post, the total number of likes are shown on the home page, and on the pages for individaul categories of news posts so that site user/site owner can see which is the most popular or viral news these days. |
+| View comments | Under each post, the total number of comments are shown on th home page. However, to see the list of the approved comments, the site user should open the detail of the news post by clicking on the tilte of the post; so that site user can read the conversation among the community. Under the details of the news post, on left side is the list of the comments and on the right side is the comment box to leave the comment. |
+| Approve comments | The site owner can approve or disapprove comments on each post to filter out the objectionable comments after login to admin account. The comment model is created with the functions to approve or disapprove comments. The approved comments will be shown on the post detail page. |
+
+#### As a site user
+| Goals | Steps to achieve them |
+| :--- | :--- |
+| Easy navigation | A navigation bar is provided for site user on each page to easily navigate around the different pages of the website. |
+| Site pagination | Site user can view a paginated list of posts on the home page and on the pages for individaul categories of news posts to easily select a post to view. |
+| View post list | Site user can view the list of posts on the home page and on the pages for individaul categories of news posts to select the one to read. |
+| Open a post | Site user can click on the title of the news post to read the detail about that news post. |
+| Account registration | In the navigation bar is a link to register an account so that site user can leave a comment and like or unlike the news post. |
+| Comment on a post | After creating an account the site user can leave a comment on the news post in the comments section on the post detail page to be involved in the conversation with the community. |
+| Like/Unlike a post | After creating an account the site user can like or unlike the news post by clicking on the icon of thumb-up on the post detail page to interact with the content and to share his/her feelings about that news. |
+
+- - -
