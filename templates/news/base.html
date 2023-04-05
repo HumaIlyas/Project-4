@@ -46,6 +46,7 @@
                             <li><a class="dropdown-item" href="{% url 'category' 'worklife' %}">Worklife</a></li>
                             <li><a class="dropdown-item" href="{% url 'category' 'climate' %}">Climate</a></li>
                             <li><a class="dropdown-item" href="{% url 'category' 'science' %}">Science</a></li>
+                            <li><a class="dropdown-item" href="{% url 'category' 'environment' %}">Environment</a></li>
                             <li><a class="dropdown-item" href="{% url 'category' 'business' %}">Business</a></li>
                         </ul>                        
                     </li>
@@ -53,14 +54,14 @@
                     <!-- Registration details will come here -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Sign out</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
                     </li>
                     {% endif %}
                 </ul>
