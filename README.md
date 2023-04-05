@@ -106,3 +106,193 @@ Main colours used in the development of World News:
 * Images are taken from [Google Images](https://images.google.nl/), which is credited in the [credits](#credits) section.
 
 [Back to Table of contents](#table-of-contents)
+
+___
+# Features
+
+## Navigation bar
+The full responsive navigation bar is featured on all the pages to allow for easy navigation from page to page across all devices.
+* On the left side is logo and title of the website, which can be used as navigation link to Home page.
+* On the left side are also links to the Home, News categories, Register, Sign In, Sign Out.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/nav-bar.jpg" alt="navigation bar">
+</div>
+
+## Footer
+The footer section is consistent on all pages and includes links to the relevant social media sites for World News.
+* The links will open in a separate tab in a browser to allow easy navigation for the users.
+* The footer is useful for users to get connected with the community for socialization through social networks.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/footer.jpg" alt="Footer">
+</div>
+
+## Home
+* The home page includes all categories of news published on World News.
+* The inclusion of an eye-catching animation draws the attention of users for different caegories of news.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/home-page.jpg" alt="Home page">
+</div>
+
+## News Categories
+* Different categories of news such as sports, science, worklife, and business will appear on their respective pages. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="assets/images/home-page.jpg" alt="Home page">
+</div>
+
+### Sports
+* The news related to sports are on sports page. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/sports-page.jpg" alt="Sports page">
+</div>
+
+### Worklife
+* The news related to worklife are on worklife page. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/worklife-page.jpg" alt="Worklife page">
+</div>
+
+### Climate
+* The news related to climate are on climate page. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/climate-page.jpg" alt="climate page">
+</div>
+
+### Science
+* The news related to science are on science page. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/science-page.jpg" alt="Science page">
+</div>
+
+### Environment
+* The news related to environment are on environment page. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/environment-page.jpg" alt="Environment page">
+</div>
+
+### Business
+* The news related to business are on business page. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/business-page.jpg" alt="Business page">
+</div>
+
+## News detail
+The users can read the detail about the news by clicking on the title of the news post. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/news_detail.jpg" alt="News detail">
+</div>
+
+## Register
+Users can register an account so that they can comment and like different categories of news posts on World News.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/register.jpg" alt="Register">
+</div>
+
+## Sign In
+After registration users can sign in so that they can comment and like different categories of news on World News.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/sign-in.jpg" alt="Sign In">
+</div>
+
+## Sign Out
+Users can sign out if they would like to be signed out due to security reasons.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/sign-out.jpg" alt="Sign Out">
+</div>
+
+## Like/Unlike a news post 
+After creating an account the user can like or unlike the news post by click/unclick the icon of thumb-up on the post detail page.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/like-unlike-news-post.jpg" alt="Like/Unlike news post">
+</div>
+
+## Submission of comment 
+The message of successful submission will appear on the post details page after leaving the comment on a news post.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/submission-comment.jpg" alt="Submission comment">
+</div>
+
+## Approval of comment 
+On the post details page after leaving the comment on a news, the message will appear to indicate that your comments needs approval.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/approval-comment.jpg" alt="Approval comment">
+</div>
+
+[Back to Table of contents](#table-of-contents)
+
+___
+# Technologies used
+
+Different technologies were used to complete the contents of World news website.
+
+### GitHub
+* As a software hosting platform to keep project in a remote location.
+
+### Git
+* As a version-control system tracking.
+
+### Gitpod  
+* As a development hosting platform.
+
+### Codeanywhere
+* As a development hosting platform.
+
+### Heroku
+* Platform as a service offering to carry out application deployment, scaling, and management.
+
+### HTML5
+* As a structure language.
+
+### CSS
+* As a style language.
+
+### Python
+*  As an interpreted, interactive, and object oriented scripting language.
+
+### JavaScript
+* As an interactivity langauage.
+
+### Django
+* As a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+
+### Postgres
+* As a relational database.
+
+### Font Awesome
+* As an icon library for icons used in the World News comments and likes section, and social links.
+
+[Back to Table of contents](#table-of-contents)
+
+___
+# Testing
+
+## Automated testing 
+The automated testing includes all the testing that is carried out by a program. World News is validated for a code using four websites ([W3C HTML Validator](https://validator.w3.org/); [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/); [JSHint JavaScript Validator](https://jshint.com/); [PEP8 online validator](http://pep8ci.herokuapp.com/#)), and performance was tested using [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool.
+
+### Code validation
+
+#### HTML
+* No errors were found when passing through the official [W3C HTML Validator](https://validator.w3.org/)
+
+#### CSS
+* No errors were found when passing through the official [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/)
+
+#### JavaScript
+* No errors were found when passing through the official [JSHint JavaScript Validator](https://jshint.com/)
+
+#### Python
+* No errors were found when passing through the official [PEP8 online validator](http://pep8ci.herokuapp.com/#)
+
+### Performance testing
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool was used to check the performance of the website.
+* Couple of changes were made to improve the performance.
+
+### Final results
+* The colors and fonts chosen are easy to read and accessible on desktop. 
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/accessibility-desktop.jpg" alt="Accessibility on desktop">
+</div>
+
+* The colors and fonts chosen are easy to read and accessible on mobile.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/accessibility-mobile.jpg" alt="Accessibility on mobile">
+</div>
