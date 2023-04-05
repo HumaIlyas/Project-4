@@ -159,6 +159,20 @@ body {
     text-decoration: underline;
 }
 
+/* Post like */
+.btn-like {
+    color: #585655;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #363534;
+    background: transparent;
+    border: none;
+}
+
 /* footer */
 .social-networks > li {
     display: inline;
