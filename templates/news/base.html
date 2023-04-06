@@ -28,7 +28,7 @@
 
             <!-- logo -->
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img id="logo" src="static/images/globe.jpg" alt="logo">
+                <img id="logo" href="{% static 'images/globe.jpg' %}" alt="logo">
             </a>
             
             <!-- Website name -->
@@ -46,7 +46,7 @@
                     <li class="nav-item"> 
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{% url 'home' %}" id="navbarDropdown" role="button" 
                         data-bs-toggle="dropdown" aria-expanded="false">News Catergories
                         </a>
