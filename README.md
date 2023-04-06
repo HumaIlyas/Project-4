@@ -324,3 +324,174 @@ World News website is meeting the needs of the [User stories](#user-stories) as 
 | Like/Unlike a post | After creating an account the site user can like or unlike the news post by clicking on the icon of thumb-up on the post detail page to interact with the content and to share his/her feelings about that news. |
 
 - - -
+
+### Full Testing
+ 
+#### Compatibility testing
+The website was tested across multiple devices such as desktop, laptops, tablets, ipads and mobiles, and browsers manually. people were asked to visit the website on a variety of devices, to setup accounts within the World News and to leave their comments and like the news. This feedback was very useful to determine any bugs that may have been present. 
+
+Below is the list of Internet Browsers that were used to test the display of the website:
+* Google Chrome
+* Microsoft Edge
+* Internet Explorer
+
+</br>Manual testing was carried out using the above browsers. No bugs or display issues could be identified.
+
+#### Functionality testing
+Chrome developer tools were used throughout the project for testing and solving problems with responsiveness and style issues.
+
+#### Navigation bar
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Navigation bar | Links direct the user to different pages of the website | Clicked the links | Different pages load | Pass |
+| Website title | Link directs the user back to the home page | Clicked the title | Home page reloads | Pass |
+| Home | Link directs the user back to the home page | Clicked the link | Home page reloads | Pass |
+| News categories | Link directs the user to the individual categories of news | Clicked the link | List of all categories of news opened | Pass |
+| Registration | Link directs the user to the registration page | Clicked the link | Registration page loads | Pass |
+| Sign In | Link directs the user to the sign in page | Clicked the link | Sign In page loads | Pass |
+| Sign Out | Link directs the user to the sign Out page | Clicked the link | Sign Out page loads | Pass |
+
+#### Footer
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Footer | The footer section is consistent on all pages | Checked footer on all pages | Footer available on different pages | Pass |
+| Links to social media | Links direct the user to different/relevant social media sites (Facebook, Twitter, Instagram, and Youtube) | Clicked the links | Social media sites load | Pass |
+| Link to Facebook | Link directs the user to Facebook | Clicked the link | Facebook loads | Pass |
+| Link to Twitter | Link directs the user to Twitter | Clicked the link | Twitter loads | Pass |
+| Link to Instagram | Link directs the user to Instagram  | Clicked the link | Instagram loads | Pass |
+| Link to Youtube | Link directs the user to Youtube | Clicked the link | Youtube loads | Pass |
+
+#### Home Page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Website title | Link directs the user back to the home page | Clicked the title | Home page reloads | Pass |
+| Home | Link directs the user back to the home page | Clicked the link | Home page reloads | Pass |
+| News posts | User can see six news posts on one page and new pages are added in case of more than six news posts | Pages checked for number of news posts | Six news posts were on one page and then new pages are added in case of more than six news posts | Pass |
+| Order of news posts | User should be able see the recent news posts first | News posts were checked based on their created date | The news posts were in descending order according to their created date | Pass |
+
+#### News categories
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| News categories | Link directs the user to the individual categories of news | Clicked the link | List of all categories of news opened | Pass |
+| Sports | Link directs the user to the news related to sports | Clicked the link | List of news related to sports opened | Pass |
+| Worklife | Link directs the user to the news related to worklife | Clicked the link | List of news related to worklife opened | Pass |
+| Climate | Link directs the user to the news related to climate | Clicked the link | List of news related to climate opened | Pass |
+| Science | Link directs the user to the news related to science | Clicked the link | List of news related to science opened | Pass |
+| Environment | Link directs the user to the news related to environment| Clicked the link | List of news related to environment opened | Pass |
+| Business | Link directs the user to the news related to business| Clicked the link | List of news related to business opened | Pass |
+
+#### News Detail
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| News detail | Title of the news posts directs the user to read the details about that news | Clicked the title | Detail of the news opened | Pass |
+
+#### Comment on a news post
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Comment on a news post | User should be able to leave a comment on the news post | Added comment in the comment box | Comment was added | Pass |
+
+#### Submission of comment
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Submit a comment | User should be able to submit a comment | Clicked the submit button | Comment was submitted | Pass |
+| Submission message | User should be confirmed about their submission of a comment | Clicked the submit button | Submission successful message | Pass |
+
+#### Approval/Disapproval of comment 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Approval/disapproval of comment | User should be able to see that their comment is approved or not | Comment approved/disapproved after login to the admin | Comment approved/disapproved | Pass |
+| Approval of comment message| User should be able to see the message that their submission needs approval | Comment was submitted | Message appeared that comment is awaiting approval | Pass |
+
+#### Comment list 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Order of comment list | User should be able see the recent comments first | Comments were checked based on their created date | The comments were in ascending order according to their created date | Pass |
+
+#### Like/Unlike a news post
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Like/Unlike a news post | User should be able to like or unlike a news post | Clicked/unclicked the icon of thumb-up on the news detail page | Like or unlike recorded | Pass |
+
+#### Registration
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Registration | Link directs the user to the registration page | Clicked the link | Registration page loads | Pass |
+| User details | User will be able to input username and password with optional email | Input of username, password and email | Username, password and email added | Pass |
+| Send button | The username, password and email will be sent | Clicked on send button | Username, password and email sent | Pass |
+| Send button - hover effect | Send button background should change when hovered over to it as suggested | Hover over the send button | Send button displayed the correct styling when hovered over | Pass |
+
+#### Sign In
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Sign In | Link directs the user to the sign in page | Clicked the link | Sign In page loads | Pass |
+| User details | User will be able to input username and password | Input of username and password | Username and password added | Pass |
+| Sign In button | The user will be able to sign in | Clicked on sign in button | User could sign in | Pass |
+| Sign In button - hover effect | Sign In button background should change when hovered over to it as suggested | Hover over the sign in button | Sign In button displayed the correct styling when hovered over | Pass |
+
+#### Sign Out
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Sign Out | Link directs the user to the sign out page | Clicked the link | Sign Out page loads | Pass |
+| Sign Out button | The user will be able to sign out | Clicked on sign out button | User could sign out | Pass |
+| Sign Out button - hover effect | Sign Out button background should change when hovered over to it as suggested | Hover over the sign out button | Sign Out button displayed the correct styling when hovered over | Pass |
+
+#### Messages
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Sign In message | Success message after sign in  | Clicked on sign in button after input of username and password | Success message of sign in appeared | Pass |
+| Sign Out message | Message after sign out | Clicked on sign out button | Message of sign out appeared | Pass |
+| Messages disappear | Messages about sign in and sign out will disappear after 2.5 seconds | Tried to sign in and sign out | Messages disappeared after 2.5 seconds | Pass |
+| Approval of comment message| User should be able to see the message that their submission needs approval | Comment was submitted | Message appeared that comment is awaiting approval | Pass |
+
+---
+
+## Issues found during site development
+
+
+## Unfixed bugs
+
+
+[Back to Table of contents](#table-of-contents)
+
+___
+# Deployment
+
+## GitHub
+Gitpod and Codeanywhere were used as a development environment where all the changes were committed to git version control system. The push command was used in Gitpod and Codeanywhere to save changes into GitHub.
+
+## Heroku
+World News was deployed using Code Institute's mock terminal for Heroku.
+The steps for deployment were as follows:
+* Fork or clone this repository
+* Create a new Heroku app
+* Set the buildpacks to Python
+* In settings add Environment variables in Config Vars including DATABASE_URL; SECRET_KEY; and CLOUDINARY_URL. During the development of the project DISABLE_COLLECTSTATIC was set to 1, which at the time of final deployment deleted.
+* DEBUG set to False before final deployment
+* Link the Heroku app to the Github repository [Project-4](https://github.com/HumaIlyas/Project-4)
+* Click on Deploy and then Deploy Branch at the bottom of the page
+* When the message appeared "Your app was successfully deployed"
+* Click on "View" to read the news on World News
+
+## [View live website](https://project-4-world-news.herokuapp.com/)
+
+[Back to Table of contents](#table-of-contents)
+
+___
+# Credits
+
+To complete the contents of World News website, I learned coding and collected the information from different sources.
+* Learned HTML, CSS, JavaScript, and Python coding from [Code Institute](https://learn.codeinstitute.net/)
+* Used Code Institute student template [gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
+* Collected information on good and bad coding practices from:
+  * [Write Best Code](https://learn.shayhowe.com/html-css/writing-your-best-code/)
+  * [HTML & CSS Coding Best Practices](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
+* The description on the DjangoBlog provided by the tutor of the Code Institute with [DjangoBlog](https://codestar2021.herokuapp.com/) was useful as well as an inspiration to design World News.
+* I acknowledge [Adegbenga Adeye](https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/) for mentor support and finishing touches.
+
+## Content
+* The details about the news were found at [BBC](https://www.bbc.com/news) and [CNN](https://edition.cnn.com/).
+* The icons used in the World News comments and likes section, and social links were taken from [Font Awesome](https://fontawesome.com/)
+* The code to make the social networks links was taken from [Project](https://github.com/HumaIlyas/Project-1)
+
+## Media
+* The images used on the Home and News Categories pages were taken from [Google Images](https://images.google.nl/)
