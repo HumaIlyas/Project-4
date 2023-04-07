@@ -14,6 +14,7 @@ ___
     - [User stories](#user-stories)
     - [Structure of the website](#structure-of-the-website)
     - [Surface](#surface)
+- [Flowchart to plan World News](#flowchart-to-plan-world-news)
 - [Features](#features)
     - [Navigation bar](#navigation-bar)
     - [Footer](#footer)
@@ -106,6 +107,20 @@ Main colours used in the development of World News:
 * Images are taken from [Google Images](https://images.google.nl/), which is credited in the [credits](#credits) section.
 
 [Back to Table of contents](#table-of-contents)
+
+___
+# Flowchart to plan World News
+For the plan of World News, considering the goals and user stories of site owner and site users, flowcharts were made, which are provided below. 
+
+### Plan based on goals and user stories of site owner
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/flowchart-plan-world-news-1.jpg" alt="Flowchart to plan World News">
+</div>
+
+### Plan based on goals and user stories of site users
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/flowchart-plan-world-news-2.jpg" alt="Flowchart to plan World News">
+</div>
 
 ___
 # Features
