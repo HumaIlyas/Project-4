@@ -28,11 +28,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["project-4-world-news.herokuapp.com", "localhost", "8000-humailyas-project-4-eerbqlq9bu.us2.codeanyapp.com"]
+ALLOWED_HOSTS = ["project-4-world-news.herokuapp.com", "localhost", "8000-humailyas-project-4-a0x0yxskim.us2.codeanyapp.com"]
 
 
 # Application definition
