@@ -173,6 +173,20 @@ body {
     border: none;
 }
 
+/* Post delete */
+.btn-delete {
+    color: #585655;
+    border: none;
+    background: transparent;
+}
+
+.btn-delete:hover,
+.btn-delete:active {
+    color: #363534;
+    background: transparent;
+    border: none;
+}
+
 /* footer */
 .social-networks > li {
     display: inline;
