@@ -509,10 +509,14 @@ Chrome developer tools were used throughout the project for testing and solving 
 ---
 
 ## Issues found during site development
+### Navigation link for news categories
+* The list of different categories of news was opened at the side on the page instead of below the news categories navigation link.<br>
+I adjusted this issue:
+   * By adding the class="dropdown" in <li class="nav-item dropdown"></li> 
 
 
 ## Unfixed bugs
-
+* No unfixed bugs
 
 [Back to Table of contents](#table-of-contents)
 
