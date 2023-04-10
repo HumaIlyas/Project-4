@@ -30,9 +30,11 @@ ___
     - [Register](#register)
     - [Sign In](#sign-in)
     - [Sign Out](#sign-out)
-    - [Like/Unlike a news post](#like-unlike-a-news-post) 
+    - [Like/Unlike a news post](#like-unlike-a-news-post)
+    - [Delete a news post](#delete-a-news-post) 
     - [Submission of comment](#submission-of-comment)
-    - [Approval of comment](#approval-of-comment)
+    - [Comment to be approved message](#comment-to-be-approved-message)
+    - [Comments need/do not need approval message](#comments-need-do-not-need-approval-message)
 - [Technologies used](#technologies-used)
 - [Testing](#testing)
     - [Automated testing](#automated-testing)
@@ -220,16 +222,35 @@ After creating an account the user can like or unlike the news post by click/unc
     <img src="static/images/like-unlike-news-post.jpg" alt="Like/Unlike news post">
 </div>
 
+## Delete a news post
+After creating an account the author of a news post can delete his/her own post by clicking the icon of trash-can next to the author name of the post but will not be able to delete the post of the others. However, admin can delete any of the news post by clicking the icon of trash-can next to the name of the authors on the home page.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/delete-news-post.jpg" alt="Delete news post">
+</div> 
+
 ## Submission of comment 
-The message of successful submission will appear on the post details page after leaving the comment on a news post.
+The message of successful submission will appear on the post detail page after leaving the comment on a news post.
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/submission-comment.jpg" alt="Submission comment">
 </div>
 
-## Approval of comment 
+## Comment to be approved message
 On the post details page after leaving the comment on a news, the message will appear to indicate that your comments needs approval.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/approval-comment.jpg" alt="Approval comment">
+    <img src="static/images/Comment-to-be-approved-message.jpg" alt="Comment to be approved message">
+</div>
+
+## Comments need/do not need approval message
+On the home page (frontend) admin can check the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve.
+
+* Comments need approval message
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/comments-need-approval-message.jpg" alt="Comments need approval message">
+</div>
+
+* Comments do not need approval message
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/comments-do-not-need-approval-message.jpg" alt="Comments do not need approval message">
 </div>
 
 [Back to Table of contents](#table-of-contents)
@@ -448,6 +469,11 @@ Chrome developer tools were used throughout the project for testing and solving 
 | --- | --- | --- | --- | --- |
 | Like/Unlike a news post | User should be able to like or unlike a news post | Clicked/unclicked the icon of thumb-up on the news detail page | Like or unlike recorded | Pass |
 
+#### Delete a news post
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Delete a news post | author of a news post can delete his/her own post & admin can delete any of the news post | Clicked/unclicked the icon of trash-can next to the author's name on the home page | Post deleted | Pass | 
+
 #### Registration
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -477,7 +503,8 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Sign In message | Success message after sign in  | Clicked on sign in button after input of username and password | Success message of sign in appeared | Pass |
 | Sign Out message | Message after sign out | Clicked on sign out button | Message of sign out appeared | Pass |
 | Messages disappear | Messages about sign in and sign out will disappear after 2.5 seconds | Tried to sign in and sign out | Messages disappeared after 2.5 seconds | Pass |
-| Approval of comment message| User should be able to see the message that their submission needs approval | Comment was submitted | Message appeared that comment is awaiting approval | Pass |
+| Approval of comment message| User should be able to see the message that their submission needs approval on post detail page | Comment was submitted | Message appeared that comment submitted and awaiting approval | Pass |
+| Comments need/do not need approval message| On the home page admin can check the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve | Clicked the icon of message | Message appeared that whether the comments on a news post need approval or currently there are no comments to approve | Pass |
 
 ---
 

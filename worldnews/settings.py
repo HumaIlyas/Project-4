@@ -32,7 +32,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["project-4-world-news.herokuapp.com", "localhost", "8000-humailyas-project-4-a0x0yxskim.us2.codeanyapp.com"]
+ALLOWED_HOSTS = ["project-4-world-news.herokuapp.com", "localhost"]
 
 
 # Application definition
