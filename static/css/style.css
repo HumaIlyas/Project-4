@@ -182,9 +182,33 @@ body {
 
 .btn-delete:hover,
 .btn-delete:active {
+    color: #343536;
+    background: transparent;
+    border: none;
+}
+
+/* message for approval of comment */
+.btn-msg {
+    color: #585655;
+    border: none;
+    background: transparent;
+}
+
+.btn-msg:hover,
+.btn-msg:active {
     color: #363534;
     background: transparent;
     border: none;
+}
+
+#message-text {
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    padding: 20px;
+    bottom: 500px;
+    left: 500px;
+    position: absolute;
 }
 
 /* footer */

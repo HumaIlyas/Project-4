@@ -94,3 +94,14 @@ class PostDelete(View):
             raise PermissionDenied
 
         return render(request, "news/index.html")
+
+
+class CommentApproval(View):
+    
+   def get(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.comments.filter(approved=False).exists():
+            if request.user.is_superuser:
+                return render(request, "news/approve_comment.html")
+        else:
+            return render(request, 'news/non_approve_comment.html')
