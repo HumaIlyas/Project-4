@@ -1,4 +1,4 @@
-{% extends 'news/base.html' %} 
+{% extends 'news/base.html' %}
 
 {% block content %}
 
@@ -104,10 +104,14 @@
         </div>
         <div class="col-md-6 card mb-4  mt-3">
             <div class="card-body">
-                <!-- Comment text will come here -->
+                <!-- Messages after leaving comment on the news post -->
                 {% if commented %}
+                <div id = "msg" class="alert alert-success" role="alert">
+                    Your comment is submitted successfully
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <div class="alert alert-success" role="alert">
-                    Your comment is submitted and awaiting approval
+                    Your comment is awaiting approval
                 </div>
                 {% else %}
                 
