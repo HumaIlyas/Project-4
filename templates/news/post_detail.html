@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row g-0">
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL will be in the src attribute -->
+                <!-- Featured image URL in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
@@ -19,7 +19,7 @@
             <div class="col-md-6 masthead-text">
                 <!-- Post title -->
                 <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post category & author will appear before | the post's created date will appear after -->
+                <!-- Post category & author | post created date -->
                 <h4 class="post-subtitle">{{ post.category}}</h4>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
@@ -32,12 +32,12 @@
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <!-- The post content will come inside the card-text -->
-                <!-- Use the | safe filter inside the template tags -->
+                <!-- Use of | safe filter inside the template tags -->
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
 
-                <!-- Post like, unlike and comment -->
+                <!-- Post like, unlike & comment -->
                 <div class="row">
 
                     <div class="col-1">
@@ -59,11 +59,12 @@
                             <span class="text-secondary"><i class="fa-regular fa-thumbs-up"></i></span>
                             {% endif %}
                             
-                            <!-- The number of likes -->
+                            <!-- Number of likes -->
                             <span class="text-secondary">{{ post.number_of_likes }}</span>
                         </strong>
                     </div>
                     
+                    <!-- Number of comments -->
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
@@ -84,21 +85,20 @@
         <div class="col-md-6 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- A for loop inside the empty control tags to iterate through each comment in comments -->
+                <!-- A for loop to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 15px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name -->
+                        <!-- Commenter's name -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date -->
+                            <!-- Comment's created date -->
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The comment of the Comment will appear before the | -->
+                    <!-- comment of the Comment -->
                     {{ comment.comment | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
@@ -106,17 +106,13 @@
             <div class="card-body">
                 <!-- Messages after leaving comment on the news post -->
                 {% if commented %}
-                <div id = "msg" class="alert alert-success" role="alert">
-                    Your comment is submitted successfully
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
+                <div id="message" class="alert alert-success" role="alert">
+                    Your comment is submitted successfully and awaiting approval
                 </div>
                 {% else %}
                 
+                <!-- comment textarea -->
                 {% if user.is_authenticated %}
-
                 <h3>Leave a comment:</h3>
                 <p>Posted by: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">

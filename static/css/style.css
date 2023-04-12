@@ -173,6 +173,10 @@ body {
     border: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Post delete */
 .btn-delete {
     color: #585655;
@@ -182,6 +186,20 @@ body {
 
 .btn-delete:hover,
 .btn-delete:active {
+    color: #363534;
+    background: transparent;
+    border: none;
+}
+
+/* comment on a post */
+.btn-comment {
+    color: #585655;
+    border: none;
+    background: transparent;
+}
+
+.btn-comment:hover,
+.btn-comment:active {
     color: #363534;
     background: transparent;
     border: none;
@@ -210,6 +228,11 @@ body {
     left: 500px;
     position: absolute;
 }
+
+#message {
+    text-align: center;
+}
+
 
 /* footer */
 .social-networks > li {

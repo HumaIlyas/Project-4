@@ -27,16 +27,7 @@
 
                                 <!-- Post author -->
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}
-                                        <!-- Post delete by admin or regular users without having to access the admin panel -->
-                                        {% if request.user.is_superuser or request.user == post.author %}
-                                        <a href="{% url 'delete_post' post.slug %}">
-                                            <button type="submit" name="post_id" value="{{post.slug}}" class="btn-delete">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                        </a>
-                                        {% endif %}
-                                    </p>
+                                    <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
 
@@ -49,9 +40,28 @@
                             <hr />
 
                             <!-- Number of likes & comments -->
-                            <p class="card-text text-muted h6">{{ post.created_on}} 
-                                <i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }} |
-                                <i class="fas fa-comments"> </i> {{ post.comments.all.count }} |
+                            <p class="card-text text-muted h6">{{ post.created_on}} | 
+                                <i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }}
+                                
+                                <!-- User to see number & list of comments after sign in -->
+                                {% if user.is_authenticated %}
+                                {% with comments.count as total_comments %}
+                                <a href="{% url 'news/post_detail' post.slug %}">
+                                    <button type="submit" name="post_id" value="{{post.slug}}" class="btn-comment">
+                                        <i class="fa-solid fa-comments"></i>{{ total_comments }}
+                                    </button>
+                                </a>
+                                {% endwith %}
+                                {% endif %}
+
+                                <!-- Post delete by admin or regular users without having to access the admin panel -->
+                                {% if request.user.is_superuser or request.user == post.author %}
+                                <a href="{% url 'delete_post' post.slug %}">
+                                    <button type="submit" name="post_id" value="{{post.slug}}" class="btn-delete">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </a>
+                                {% endif %}
 
                                 <!-- Comments need approval message for admin without having to access the admin panel -->
                                 {% if request.user.is_superuser %}
