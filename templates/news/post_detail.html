@@ -5,23 +5,23 @@
 {% load crispy_forms_tags %}
 
 <!-- post details -->
-<div class="masthead">
+<div class="head">
     <div class="container">
         <div class="row g-0">
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="col-md-6 head-text">
+                <!-- Post title -->
+                <h1 class="post-title">{{ post.title }}</h1>
+                <!-- Post category & author | post created date -->
+                <h4 class="post-subtitle">{{ post.category}}</h4>
+                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 head-image">
                 <!-- Featured image URL in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
-            </div>
-            <div class="col-md-6 masthead-text">
-                <!-- Post title -->
-                <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post category & author | post created date -->
-                <h4 class="post-subtitle">{{ post.category}}</h4>
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
         </div>
     </div>

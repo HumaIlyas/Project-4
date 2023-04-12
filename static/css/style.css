@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
 
 /* body */
 body {
@@ -39,8 +39,7 @@ body {
 }
 
 .font {
-    font-weight: 500;
-    color: #171719;
+    font-weight: 600;
 }
 
 /*News Entries Column*/
@@ -83,7 +82,7 @@ body {
 }
 
 /* post details */
-.masthead {
+.head {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
@@ -92,18 +91,18 @@ body {
     width: 100%;
 }
 
-.masthead-text {
+.head-text {
     background-color: #13355b;
     color: white;
     position: relative;
 }
 
-.masthead-image {
+.head-image {
     position: relative;
     overflow: hidden;
 }
 
-.masthead-image:after {
+.head-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -111,10 +110,6 @@ body {
     height: 100%;
     width: 150%;
     background: #13355b;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
 }
 
 .post-title {
@@ -127,7 +122,7 @@ body {
     color: lightgray;
 }
 
-/* login, logout & signup form */
+/* sign in, sign out & registration form */
 .black {
     color: #171719;
 }
