@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic.base import TemplateView
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -109,5 +108,15 @@ class CommentApproval(View):
             return render(request, 'news/non_approve_comment.html')
 
 
-class UserProfile(TemplateView):
-    template_name = 'news/profile.html'
+class UserProfile(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            return render(request, "news/profile.html")
+
+
+class UserAdmin(View):
+    def get(request):
+        if request.user.is_superuser:
+            return render(request, "news/admin.html")
+        else:
+            return render(request, 'news/admin.html')

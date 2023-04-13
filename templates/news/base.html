@@ -63,6 +63,9 @@
                     <!-- Registration details will come here -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'admin' %}">Admin</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>
                     <li class="nav-item">

@@ -9,4 +9,5 @@ urlpatterns = [
     path('delete/<slug:slug>', views.PostDelete.as_view(), name='delete_post'),
     path('approve/<slug:slug>', views.CommentApproval.as_view(), name='approve_comment'),
     path('profile/', views.UserProfile.as_view(), name='profile'),
+    path('admin/', views.UserAdmin.as_view(), name='admin'),
 ]
