@@ -42,7 +42,7 @@ body {
     font-weight: 600;
 }
 
-/*News Entries Column*/
+/* news entries column */
 .card {
     border: none;
     background-color: transparent;
@@ -154,7 +154,42 @@ body {
     text-decoration: underline;
 }
 
-/* Post like */
+.form {
+    margin: 10px 0;
+    color: rgb(109, 10, 10);
+    background-color:rgba(246, 224, 224, 0.8);
+    max-width: 100%;
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+input {
+    background-color: rgb(247, 238, 238);
+    color: rgb(109, 10, 10);
+    width: 98%;
+    height: 30px;
+    margin: 5px 0 10px;
+    padding: 5px;
+    border: 1px solid rgb(246, 224, 224);
+    border-radius: 2px;
+}
+
+input:hover {
+    border-color: rgb(109, 10, 10);
+}
+
+input[type="checkbox" i] {
+    background-color: rgb(247, 238, 238);
+    border: 1px solid rgb(246, 224, 224);
+    border-radius: 2px;
+}
+
+input[type="checkbox" i]:hover {
+    border-color: rgb(109, 10, 10);
+}
+
+/* post like */
 .btn-like {
     color: #585655;
     border: none;
@@ -172,7 +207,7 @@ a {
     text-decoration: none;
 }
 
-/* Post delete */
+/* post delete */
 .btn-delete {
     color: #585655;
     border: none;
