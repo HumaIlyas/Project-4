@@ -1,0 +1,13 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+
+<!-- User Profile -->
+<div id="message-text">
+    <div class="alert alert-info" role="alert">
+        <p>Username: {{ user.username }}</p>
+        <p>Email: {{ user.email }}</p>
+    </div>
+</div>
+
+{% endblock %}
