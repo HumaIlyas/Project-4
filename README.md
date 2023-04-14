@@ -14,7 +14,7 @@ ___
     - [User stories](#user-stories)
     - [Structure of the website](#structure-of-the-website)
     - [Surface](#surface)
-- [Flowchart to plan World News](#flowchart-to-plan-world-news)
+- [Flowcharts to plan World News](#flowcharts-to-plan-world-news)
 - [Features](#features)
     - [Navigation bar](#navigation-bar)
     - [Footer](#footer)
@@ -111,8 +111,8 @@ Main colours used in the development of World News:
 [Back to Table of contents](#table-of-contents)
 
 ___
-# Flowchart to plan World News
-For the plan of World News, considering the goals and user stories of site owner and site users, flowcharts were made, which are provided below. 
+# Flowcharts to plan World News
+The design of World News was planned considering the goals and user stories of site owner and site users, as well as the CRUD and other functionality at the front end. For this purpose flowcharts were made, which are provided below. 
 
 ### Plan based on goals and user stories of site owner
 <div style="margin-top: 20px; margin-bottom: 20px;">
@@ -122,6 +122,11 @@ For the plan of World News, considering the goals and user stories of site owner
 ### Plan based on goals and user stories of site users
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/flowchart-plan-world-news-2.jpg" alt="Flowchart to plan World News">
+</div>
+
+### Plan for CRUD and other functionality at the front end
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/flowchart-plan-world-news-3.jpg" alt="Flowchart to plan World News">
 </div>
 
 ___
@@ -336,20 +341,20 @@ The automated testing includes all the testing that is carried out by a program.
 ### Running python testing
 Django testing was done for forms, models, and views. Test were run OK.
 
-* forms
-
+#### Forms
+</br>Test results of forms
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/test-forms.jpg" alt="Test forms">
 </div>
 
-* models
-
+#### Models
+</br>Test results of models
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/test-models.jpg" alt="Test models">
 </div>
 
-* views
-
+#### Views
+</br>Test results of views
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/test-views.jpg" alt="Test views">
 </div>
@@ -359,7 +364,7 @@ Django testing was done for forms, models, and views. Test were run OK.
 ### Testing User Stories
 World News website is meeting the needs of the [User stories](#user-stories) as described in the UX section of this README document.
 
-#### As a site user/site owner
+#### **As a site user/site owner**
 | Goals | Steps to achieve them |
 | :--- | :--- |
 | Manage posts | The site owner can create, read, update, and delete posts after login to admin account to manage the news content. The post model is created with the functions to create, read, update, and delete posts. |
@@ -369,7 +374,7 @@ World News website is meeting the needs of the [User stories](#user-stories) as 
 | View comments | Under each post, the total number of comments are shown on th home page. However, to see the list of the approved comments, the site user should open the detail of the news post by clicking on the tilte of the post; so that site user can read the conversation among the community. Under the details of the news post, on left side is the list of the comments and on the right side is the comment box to leave the comment. |
 | Approve comments | The site owner can approve or disapprove comments on each post to filter out the objectionable comments after login to admin account. The comment model is created with the functions to approve or disapprove comments. The approved comments will be shown on the post detail page. |
 
-#### As a site user
+#### **As a site user**
 | Goals | Steps to achieve them |
 | :--- | :--- |
 | Easy navigation | A navigation bar is provided for site user on each page to easily navigate around the different pages of the website. |
@@ -391,24 +396,25 @@ Below is the list of Internet Browsers that were used to test the display of the
 * Google Chrome
 * Microsoft Edge
 * Internet Explorer
-
 </br>Manual testing was carried out using the above browsers. No bugs or display issues could be identified.
 
 #### Functionality testing
 Chrome developer tools were used throughout the project for testing and solving problems with responsiveness and style issues.
 
-#### Navigation bar
+#### **Navigation bar**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Navigation bar | Links direct the user to different pages of the website | Clicked the links | Different pages load | Pass |
 | Website title | Link directs the user back to the home page | Clicked the title | Home page reloads | Pass |
 | Home | Link directs the user back to the home page | Clicked the link | Home page reloads | Pass |
 | News categories | Link directs the user to the individual categories of news | Clicked the link | List of all categories of news opened | Pass |
+| Admin | Link at the front end to have access to the admin panel. Admin can have direct access; however, users can have a form to complete the requirements to access the admin panel | Clicked the link | Admin panel for the admin and form to complete the requirements for other users loads | Pass |
+| Profile | Link at the front end to have access to the profile for the users | Clicked the link | Profile page loads | Pass |
 | Registration | Link directs the user to the registration page | Clicked the link | Registration page loads | Pass |
 | Sign In | Link directs the user to the sign in page | Clicked the link | Sign In page loads | Pass |
 | Sign Out | Link directs the user to the sign Out page | Clicked the link | Sign Out page loads | Pass |
 
-#### Footer
+#### **Footer**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Footer | The footer section is consistent on all pages | Checked footer on all pages | Footer available on different pages | Pass |
@@ -418,7 +424,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Link to Instagram | Link directs the user to Instagram  | Clicked the link | Instagram loads | Pass |
 | Link to Youtube | Link directs the user to Youtube | Clicked the link | Youtube loads | Pass |
 
-#### Home Page
+#### **Home Page**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Website title | Link directs the user back to the home page | Clicked the title | Home page reloads | Pass |
@@ -426,7 +432,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 | News posts | User can see six news posts on one page and new pages are added in case of more than six news posts | Pages checked for number of news posts | Six news posts were on one page and then new pages are added in case of more than six news posts | Pass |
 | Order of news posts | User should be able see the recent news posts first | News posts were checked based on their created date | The news posts were in descending order according to their created date | Pass |
 
-#### News categories
+#### **News categories**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | News categories | Link directs the user to the individual categories of news | Clicked the link | List of all categories of news opened | Pass |
@@ -437,44 +443,48 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Environment | Link directs the user to the news related to environment| Clicked the link | List of news related to environment opened | Pass |
 | Business | Link directs the user to the news related to business| Clicked the link | List of news related to business opened | Pass |
 
-#### News Detail
+#### **News Detail**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | News detail | Title of the news posts directs the user to read the details about that news | Clicked the title | Detail of the news opened | Pass |
 
-#### Comment on a news post
+#### **Comment on a news post**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Comment on a news post | User should be able to leave a comment on the news post | Added comment in the comment box | Comment was added | Pass |
+| Comment on a news post | User should be able to leave a comment on the news post after sign in | Added comment in the comment box | Comment was added | Pass |
 
-#### Submission of comment
+#### **Submission of comment**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Submit a comment | User should be able to submit a comment | Clicked the submit button | Comment was submitted | Pass |
 | Submission message | User should be confirmed about their submission of a comment | Clicked the submit button | Submission successful message | Pass |
 
-#### Approval/Disapproval of comment 
+#### **Approval/Disapproval of comment** 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Approval/disapproval of comment | User should be able to see that their comment is approved or not | Comment approved/disapproved after login to the admin | Comment approved/disapproved | Pass |
-| Approval of comment message| User should be able to see the message that their submission needs approval | Comment was submitted | Message appeared that comment is awaiting approval | Pass |
+| Approval of comment message | User should be able to see the message that their submission needs approval | Comment was submitted | Message appeared that comment is awaiting approval | Pass |
+| Approval/disapproval of comment | User should be able to see that their comment is approved or not | Comment approved/disapproved after login to the admin panel by the admin | Comment approved/disapproved | Pass |
+| Comment needs/do not need approval message for the admin | After sign in admin should be able to see the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve | Clicked the icon of message | Message appeared that whether the comments on a news post need approval or currently there are no comments to approve | Pass |
 
-#### Comment list 
+#### **Comment number and list** 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Order of comment list | User should be able see the recent comments first | Comments were checked based on their created date | The comments were in ascending order according to their created date | Pass |
+| Comment number and list | User should be able see icon of comments on each post after sign in. By clicking on the icon the number and list of comments will display on the post detail page | Clicked the icon of comments | The number and list of comments displayed on the post detail page | Pass |
 
-#### Like/Unlike a news post
+#### **Like/Unlike a news post**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Like/Unlike a news post | User should be able to like or unlike a news post | Clicked/unclicked the icon of thumb-up on the news detail page | Like or unlike recorded | Pass |
+| Like/Unlike a news post | User should be able to like or unlike a news post after sign in | Clicked/unclicked the icon of thumb-up on the news detail page | Like or unlike recorded | Pass |
 
-#### Delete a news post
+#### **Delete a news post**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Delete a news post | author of a news post can delete his/her own post & admin can delete any of the news post | Clicked/unclicked the icon of trash-can next to the author's name on the home page | Post deleted | Pass | 
+| Delete a news post | User/author should be able see icon of trash-can on their own news post after sign in. Author of a news post can delete his/her own post; however, admin should be able see icon of trash-can on all posts after sign in and can delete any of the news post | Clicked the icon of trash-can on the post | Post deleted | Pass | 
 
-#### Registration
+#### **Registration**
+Forms on the front end for either admin or regular users with **CRUD functionality** without having to access the admin panel.
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Registration | Link directs the user to the registration page | Clicked the link | Registration page loads | Pass |
@@ -482,7 +492,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Send button | The username, password and email will be sent | Clicked on send button | Username, password and email sent | Pass |
 | Send button - hover effect | Send button background should change when hovered over to it as suggested | Hover over the send button | Send button displayed the correct styling when hovered over | Pass |
 
-#### Sign In
+#### **Sign In**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Sign In | Link directs the user to the sign in page | Clicked the link | Sign In page loads | Pass |
@@ -490,30 +500,45 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Sign In button | The user will be able to sign in | Clicked on sign in button | User could sign in | Pass |
 | Sign In button - hover effect | Sign In button background should change when hovered over to it as suggested | Hover over the sign in button | Sign In button displayed the correct styling when hovered over | Pass |
 
-#### Sign Out
+#### **Sign Out**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Sign Out | Link directs the user to the sign out page | Clicked the link | Sign Out page loads | Pass |
 | Sign Out button | The user will be able to sign out | Clicked on sign out button | User could sign out | Pass |
 | Sign Out button - hover effect | Sign Out button background should change when hovered over to it as suggested | Hover over the sign out button | Sign Out button displayed the correct styling when hovered over | Pass |
 
-#### Messages
+#### **Messages**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Sign In message | Success message after sign in  | Clicked on sign in button after input of username and password | Success message of sign in appeared | Pass |
 | Sign Out message | Message after sign out | Clicked on sign out button | Message of sign out appeared | Pass |
-| Messages disappear | Messages about sign in and sign out will disappear after 2.5 seconds | Tried to sign in and sign out | Messages disappeared after 2.5 seconds | Pass |
+| Messages disappear | Messages about sign in and sign out will disappear after 3 seconds | Tried to sign in and sign out | Messages disappeared after 3 seconds | Pass |
+| Error/warning messages on registration & Sign In form | Error messages should appear about username and/or email already in use; password is too short or similar to username; and password should be same on registration form. Error message should appear that username and/or email not correct;| Tried to register and sign in with these errors | Error messages appeared | Pass |
 | Approval of comment message| User should be able to see the message that their submission needs approval on post detail page | Comment was submitted | Message appeared that comment submitted and awaiting approval | Pass |
-| Comments need/do not need approval message| On the home page admin can check the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve | Clicked the icon of message | Message appeared that whether the comments on a news post need approval or currently there are no comments to approve | Pass |
+| Comment needs/do not need approval message for the admin | After sign in admin should be able to see the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve | Clicked the icon of message | Message appeared that whether the comments on a news post need approval or currently there are no comments to approve | Pass |
 
 ---
 
 ## Issues found during site development
+### Navigation link for logo
+* Logo of World News was not shown while opening the pages of profile, news categories, register, sign in, and sign out.<br>
+I adjusted this issue:
+   * By adding the "/" at the start of the link before static: src="/static/images/globe.jpg"  
+
 ### Navigation link for news categories
 * The list of different categories of news was opened at the side on the page instead of below the news categories navigation link.<br>
 I adjusted this issue:
-   * By adding the class="dropdown" in <li class="nav-item dropdown"></li> 
+   * By adding the class="dropdown" in the list: class="nav-item dropdown"
 
+### Link to JavaScript file
+* JavaScript file was added for some messages (with id="msg") to disappear after 3 seconds. Messages did not disappear.<br>
+I adjusted this issue:
+   * By adding the "/" at the start of the link before static: src="/static/js/script.js"
+
+### Icons with text-decoration
+* Icons of comments, messages, & trash-can at the news post displayed with text-decoration.<br>
+I adjusted this issue:
+   * By changing the style of anchor tag: a {text-decoration: none;}
 
 ## Unfixed bugs
 * No unfixed bugs
@@ -558,7 +583,7 @@ To complete the contents of World News website, I learned coding and collected t
 ## Content
 * The details about the news were found at [BBC](https://www.bbc.com/news) and [CNN](https://edition.cnn.com/).
 * The icons used in the World News comments and likes section, and social links were taken from [Font Awesome](https://fontawesome.com/)
-* The code to make the social networks links was taken from [Project](https://github.com/HumaIlyas/Project-1)
+* The code to make the social networks links was taken from [Project: Yoga For Self-Improvement](https://github.com/HumaIlyas/Project-1)
 
 ## Media
 * The images used on the Home and News Categories pages were taken from [Google Images](https://images.google.nl/)
