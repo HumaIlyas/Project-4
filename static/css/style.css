@@ -189,6 +189,23 @@ input[type="checkbox" i]:hover {
     border-color: rgb(109, 10, 10);
 }
 
+ul {
+    display: block;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    width: 98%;
+}
+
+.errorlist {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    text-align: left;
+}
+
 /* post like */
 .btn-like {
     color: #585655;
