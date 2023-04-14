@@ -74,11 +74,15 @@ body {
 }
 
 .page-link {
-    color:#052241
+    color: rgb(109, 10, 10);
+    background-color: rgb(247, 238, 238);
+    border: 1px solid rgb(246, 224, 224);
+    border-radius: 5px;
 }
 
 .page-link:hover {
-    color:#97250e
+    color: rgb(78, 6, 6);
+    background-color: rgb(238, 205, 205);
 }
 
 /* post details */
