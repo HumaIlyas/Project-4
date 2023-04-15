@@ -30,11 +30,12 @@ ___
     - [Register](#register)
     - [Sign In](#sign-in)
     - [Sign Out](#sign-out)
+    - [Admin](#admin)
+    - [Profile](#profile)
     - [Like/Unlike a news post](#like-unlike-a-news-post)
-    - [Delete a news post](#delete-a-news-post) 
-    - [Submission of comment](#submission-of-comment)
-    - [Comment to be approved message](#comment-to-be-approved-message)
-    - [Comments need/do not need approval message](#comments-need-do-not-need-approval-message)
+    - [Delete a news post](#delete-a-news-post)
+    - [Comment submission and needs approval message](#comment-submission-and-needs-approval-message)
+    - [Comments need/do not need approval message for admin](#comments-need-do-not-need-approval-message-for-admin)
 - [Technologies used](#technologies-used)
 - [Testing](#testing)
     - [Automated testing](#automated-testing)
@@ -135,9 +136,26 @@ ___
 ## Navigation bar
 The full responsive navigation bar is featured on all the pages to allow for easy navigation from page to page across all devices.
 * On the left side is logo and title of the website, which can be used as navigation link to Home page.
-* On the left side are also links to the Home, News categories, Register, Sign In, Sign Out.
+* On the left side are also links to the Home, News categories, Admin, Profile, Register, Sign In, Sign Out.
+
+* When admin or other users are not sign in, the links to the Home, News categories, Register, and Sign In will be shown.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/nav-bar.jpg" alt="navigation bar">
+    <img src="static/images/nav-bar1.jpg" alt="navigation bar">
+</div>
+
+* When admin will sign in, the links to the Home, News categories, Admin, Profile, and Sign Out will be shown.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/nav-bar2.jpg" alt="navigation bar">
+</div>
+
+* When other users will sign in, the links to the Home, News categories, Profile, and Sign Out will be shown.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/nav-bar3.jpg" alt="navigation bar">
+</div>
+
+* Different categories of news such as sports, worklife, climate, science, environment, and business will appear on their respective pages. The user can click on the news categories dropdown button to have access to different categories of news. Dropdown button will direct the user to the titles of different categories of news.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="assets/images/nav-bar4.jpg" alt="Home page">
 </div>
 
 ## Footer
@@ -156,43 +174,40 @@ The footer section is consistent on all pages and includes links to the relevant
 </div>
 
 ## News Categories
-* Different categories of news such as sports, science, worklife, and business will appear on their respective pages. 
-<div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="assets/images/home-page.jpg" alt="Home page">
-</div>
+Different categories of news such as sports, worklife, climate, science, environment, and business will appear on their respective pages
 
 ### Sports
-* The news related to sports are on sports page. 
+The news related to sports are on sports page. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/sports-page.jpg" alt="Sports page">
 </div>
 
 ### Worklife
-* The news related to worklife are on worklife page. 
+The news related to worklife are on worklife page. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/worklife-page.jpg" alt="Worklife page">
 </div>
 
 ### Climate
-* The news related to climate are on climate page. 
+The news related to climate are on climate page. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/climate-page.jpg" alt="climate page">
 </div>
 
 ### Science
-* The news related to science are on science page. 
+The news related to science are on science page. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/science-page.jpg" alt="Science page">
 </div>
 
 ### Environment
-* The news related to environment are on environment page. 
+The news related to environment are on environment page. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/environment-page.jpg" alt="Environment page">
 </div>
 
 ### Business
-* The news related to business are on business page. 
+The news related to business are on business page. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/business-page.jpg" alt="Business page">
 </div>
@@ -221,6 +236,18 @@ Users can sign out if they would like to be signed out due to security reasons.
     <img src="static/images/sign-out.jpg" alt="Sign Out">
 </div>
 
+## Admin
+Admin can have access to admin panel after sign in.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/admin.jpg" alt="Register">
+</div>
+
+## Profile
+Users can have access to their profile after sign in.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/profile.jpg" alt="Register">
+</div>
+
 ## Like/Unlike a news post 
 After creating an account the user can like or unlike the news post by click/unclick the icon of thumb-up on the post detail page.
 <div style="margin-top: 20px; margin-bottom: 20px;">
@@ -228,24 +255,23 @@ After creating an account the user can like or unlike the news post by click/unc
 </div>
 
 ## Delete a news post
-After creating an account the author of a news post can delete his/her own post by clicking the icon of trash-can next to the author name of the post but will not be able to delete the post of the others. However, admin can delete any of the news post by clicking the icon of trash-can next to the name of the authors on the home page.
+* After sign in the admin can delete any of the news post by clicking the icon of trash-can on that post.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/delete-news-post.jpg" alt="Delete news post">
+    <img src="static/images/delete-news-post1.jpg" alt="Delete news post">
 </div> 
 
-## Submission of comment 
-The message of successful submission will appear on the post detail page after leaving the comment on a news post.
+* After sign in the author of a news post can delete his/her own post by clicking the icon of trash-can on the post but will not be able to delete the post of the others.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/submission-comment.jpg" alt="Submission comment">
+    <img src="static/images/delete-news-post2.jpg" alt="Delete news post">
 </div>
 
-## Comment to be approved message
-On the post details page after leaving the comment on a news, the message will appear to indicate that your comments needs approval.
+## Comment submission and needs approval message
+The message of successful submission of comment and needs approval message will appear on the post detail page after leaving the comment on a news post.
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/Comment-to-be-approved-message.jpg" alt="Comment to be approved message">
 </div>
 
-## Comments need/do not need approval message
+## Comments need/do not need approval message for admin
 On the home page (frontend) admin can check the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve.
 
 * Comments need approval message
@@ -407,7 +433,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Navigation bar | Links direct the user to different pages of the website | Clicked the links | Different pages load | Pass |
 | Website title | Link directs the user back to the home page | Clicked the title | Home page reloads | Pass |
 | Home | Link directs the user back to the home page | Clicked the link | Home page reloads | Pass |
-| News categories | Link directs the user to the individual categories of news | Clicked the link | List of all categories of news opened | Pass |
+| News categories | The user can click on the news categories dropdown button to have access to different categories of news. Dropdown button directs the user to the titles of different categories of news | Clicked the dropdown button | List of all categories of news opened | Pass |
 | Admin | Link at the front end to have access to the admin panel. Admin should have direct access to the admin panel after sign in | Clicked the link | Admin panel for the admin loads | Pass |
 | Profile | Link at the front end to have access to the profile for the users | Clicked the link | Profile page loads | Pass |
 | Registration | Link directs the user to the registration page | Clicked the link | Registration page loads | Pass |
@@ -435,7 +461,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 #### **News categories**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| News categories | Link directs the user to the individual categories of news | Clicked the link | List of all categories of news opened | Pass |
+| News categories | The user can click on the news categories dropdown button to have access to different categories of news. Dropdown button directs the user to the titles of different categories of news | Clicked the dropdown button | List of all categories of news opened | Pass |
 | Sports | Link directs the user to the news related to sports | Clicked the link | List of news related to sports opened | Pass |
 | Worklife | Link directs the user to the news related to worklife | Clicked the link | List of news related to worklife opened | Pass |
 | Climate | Link directs the user to the news related to climate | Clicked the link | List of news related to climate opened | Pass |
@@ -456,21 +482,25 @@ Chrome developer tools were used throughout the project for testing and solving 
 #### **Submission of comment**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Submit a comment | User should be able to submit a comment | Clicked the submit button | Comment was submitted | Pass |
-| Submission message | User should be confirmed about their submission of a comment | Clicked the submit button | Submission successful message | Pass |
+| Submit button | User should be able to submit a comment | Clicked the submit button | Comment was submitted | Pass |
+| Submit button - hover effect | Submit button background should change when hovered over to it as suggested | Hover over the submit button | Submit button displayed the correct styling when hovered over | Pass |
 
-#### **Approval/Disapproval of comment** 
+#### **Message for user after submission of comment** 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Approval of comment message | User should be able to see the message that their submission needs approval | Comment was submitted | Message appeared that comment is awaiting approval | Pass |
+| Comment submission and needs approval message | User should be able to see the message that their submission is successful and needs approval | Clicked the submit button and comment was submitted | Message appeared that comment is submitted and awaiting approval | Pass |
+
+#### **Approval/disapproval of submitted comment by the admin** 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
 | Approval/disapproval of comment | User should be able to see that their comment is approved or not | Comment approved/disapproved after login to the admin panel by the admin | Comment approved/disapproved | Pass |
 | Comment needs/do not need approval message for the admin | After sign in admin should be able to see the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve | Clicked the icon of message | Message appeared that whether the comments on a news post need approval or currently there are no comments to approve | Pass |
 
-#### **Comment number and list** 
+#### **Comments number and list** 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Order of comment list | User should be able see the recent comments first | Comments were checked based on their created date | The comments were in ascending order according to their created date | Pass |
-| Comment number and list | User should be able see icon of comments on each post after sign in. By clicking on the icon the number and list of comments will display on the post detail page | Clicked the icon of comments | The number and list of comments displayed on the post detail page | Pass |
+| Comments number and list | User should be able see icon of comments on each post after sign in. By clicking on the icon the number and list of comments will display on the post detail page | Clicked the icon of comments | The number and list of comments displayed on the post detail page | Pass |
 
 #### **Like/Unlike a news post**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -507,6 +537,16 @@ Forms on the front end for either admin or regular users with **CRUD functionali
 | Sign Out button | The user will be able to sign out | Clicked on sign out button | User could sign out | Pass |
 | Sign Out button - hover effect | Sign Out button background should change when hovered over to it as suggested | Hover over the sign out button | Sign Out button displayed the correct styling when hovered over | Pass |
 
+#### **Admin**
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Admin | Link directs the admin to the admin panel after sign in | Clicked the link | Admin panel loads | Pass |
+
+#### **Profile**
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Profile | Link directs the user to their profile after sign in | Clicked the link | Profile page loads | Pass |
+
 #### **Messages**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -514,7 +554,7 @@ Forms on the front end for either admin or regular users with **CRUD functionali
 | Sign Out message | Message after sign out | Clicked on sign out button | Message of sign out appeared | Pass |
 | Messages disappear | Messages about sign in and sign out will disappear after 3 seconds | Tried to sign in and sign out | Messages disappeared after 3 seconds | Pass |
 | Error/warning messages on registration & Sign In form | Error messages should appear about username and/or email already in use; password is too short or similar to username; and password should be same on registration form. Error message should appear that username and/or email not correct;| Tried to register and sign in with these errors | Error messages appeared | Pass |
-| Approval of comment message| User should be able to see the message that their submission needs approval on post detail page | Comment was submitted | Message appeared that comment submitted and awaiting approval | Pass |
+| Comment submission and needs approval message| User should be able to see the message that their submission needs approval on post detail page | Comment was submitted | Message appeared that comment is submitted and awaiting approval | Pass |
 | Comment needs/do not need approval message for the admin | After sign in admin should be able to see the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve | Clicked the icon of message | Message appeared that whether the comments on a news post need approval or currently there are no comments to approve | Pass |
 
 ---
