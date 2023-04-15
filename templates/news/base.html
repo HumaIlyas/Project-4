@@ -60,11 +60,14 @@
                         </ul>                        
                     </li>
 
-                    <!-- Registration details will come here -->
-                    {% if user.is_authenticated %}
+                    <!-- Access to admin panel -->
+                    {% if user.is_superuser %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'admin' %}">Admin</a>
                     </li>
+                    {% endif %}
+                    <!-- Registration details -->
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>

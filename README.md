@@ -342,19 +342,19 @@ The automated testing includes all the testing that is carried out by a program.
 Django testing was done for forms, models, and views. Test were run OK.
 
 #### Forms
-</br>Test results of forms
+Test results of forms
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/test-forms.jpg" alt="Test forms">
 </div>
 
 #### Models
-</br>Test results of models
+Test results of models
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/test-models.jpg" alt="Test models">
 </div>
 
 #### Views
-</br>Test results of views
+Test results of views
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/test-views.jpg" alt="Test views">
 </div>
@@ -408,7 +408,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Website title | Link directs the user back to the home page | Clicked the title | Home page reloads | Pass |
 | Home | Link directs the user back to the home page | Clicked the link | Home page reloads | Pass |
 | News categories | Link directs the user to the individual categories of news | Clicked the link | List of all categories of news opened | Pass |
-| Admin | Link at the front end to have access to the admin panel. Admin can have direct access; however, users can have a form to complete the requirements to access the admin panel | Clicked the link | Admin panel for the admin and form to complete the requirements for other users loads | Pass |
+| Admin | Link at the front end to have access to the admin panel. Admin should have direct access to the admin panel after sign in | Clicked the link | Admin panel for the admin loads | Pass |
 | Profile | Link at the front end to have access to the profile for the users | Clicked the link | Profile page loads | Pass |
 | Registration | Link directs the user to the registration page | Clicked the link | Registration page loads | Pass |
 | Sign In | Link directs the user to the sign in page | Clicked the link | Sign In page loads | Pass |
