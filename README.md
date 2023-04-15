@@ -155,7 +155,13 @@ The full responsive navigation bar is featured on all the pages to allow for eas
 
 * Different categories of news such as sports, worklife, climate, science, environment, and business will appear on their respective pages. The user can click on the news categories dropdown button to have access to different categories of news. Dropdown button will direct the user to the titles of different categories of news.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="assets/images/nav-bar4.jpg" alt="Home page">
+    <img src="static/images/nav-bar4.jpg" alt="Home page">
+</div>
+
+## Site pagination
+Site pagination is consistent on all pages and includes links to access the next or previous page of the World News.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="static/images/site-pagination.jpg" alt="Footer">
 </div>
 
 ## Footer
@@ -237,15 +243,15 @@ Users can sign out if they would like to be signed out due to security reasons.
 </div>
 
 ## Admin
-Admin can have access to admin panel after sign in.
+Admin can have direct access to admin panel after sign in.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/admin.jpg" alt="Register">
+    <img src="static/images/admin-panel.jpg" alt="Admin">
 </div>
 
 ## Profile
-Users can have access to their profile after sign in.
+Admin and other users can have access to their profile after sign in.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/profile.jpg" alt="Register">
+    <img src="static/images/profile-page.jpg" alt="Profile">
 </div>
 
 ## Like/Unlike a news post 
@@ -435,7 +441,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 | Home | Link directs the user back to the home page | Clicked the link | Home page reloads | Pass |
 | News categories | The user can click on the news categories dropdown button to have access to different categories of news. Dropdown button directs the user to the titles of different categories of news | Clicked the dropdown button | List of all categories of news opened | Pass |
 | Admin | Link at the front end to have access to the admin panel. Admin should have direct access to the admin panel after sign in | Clicked the link | Admin panel for the admin loads | Pass |
-| Profile | Link at the front end to have access to the profile for the users | Clicked the link | Profile page loads | Pass |
+| Profile | Link at the front end to have access to the profile for the admin and other users | Clicked the link | Profile page loads | Pass |
 | Registration | Link directs the user to the registration page | Clicked the link | Registration page loads | Pass |
 | Sign In | Link directs the user to the sign in page | Clicked the link | Sign In page loads | Pass |
 | Sign Out | Link directs the user to the sign Out page | Clicked the link | Sign Out page loads | Pass |
@@ -545,7 +551,7 @@ Forms on the front end for either admin or regular users with **CRUD functionali
 #### **Profile**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Profile | Link directs the user to their profile after sign in | Clicked the link | Profile page loads | Pass |
+| Profile | Link directs the admin and the other users to their profile after sign in | Clicked the link | Profile page loads | Pass |
 
 #### **Messages**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
