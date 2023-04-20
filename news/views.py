@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from .models import Category, Post
 from .forms import CommentForm
-    
+
 
 class PostCategory(View):
 
@@ -73,7 +73,7 @@ class PostDetail(View):
 
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
 
@@ -86,11 +86,11 @@ class PostLike(View):
 
 
 class PostDelete(View):
-    
+
     def get(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if request.user.is_superuser or request.user == post.author:
-            post.delete() 
+            post.delete()
         else:
             raise PermissionDenied
 
@@ -98,8 +98,8 @@ class PostDelete(View):
 
 
 class CommentApproval(View):
-    
-   def get(self, request, slug, *args, **kwargs):
+
+    def get(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.comments.filter(approved=False).exists():
             if request.user.is_superuser:

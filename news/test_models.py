@@ -57,7 +57,7 @@ class TestPost(TestCase):
         self.assertEqual(int(post.status), 0)
         self.assertEqual(post.likes.first(), self.user)
         self.assertEqual(post.likes.count(), 1)
-        
+
     def test_created_on(self):
         mocked = datetime.datetime(2023, 3, 3, 0, 0, 0, tzinfo=pytz.utc)
         with mock.patch('django.utils.timezone.now', mock.Mock(return_value=mocked)):
@@ -86,7 +86,7 @@ class TestComment(TestCase):
             password='testpass',
         )
         self.user.save()
-        
+
         self.post = Post.objects.create(
             title='test post',
         )

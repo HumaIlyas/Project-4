@@ -3,7 +3,8 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.models import User
 from .models import Category, Post, Comment
 from .forms import CommentForm
-from .views import PostCategory, PostList, PostDetail, PostLike, PostDelete, CommentApproval, UserProfile, UserAdmin
+from .views import PostCategory, PostList, PostDetail, PostLike,
+PostDelete, CommentApproval, UserProfile, UserAdmin
 
 
 class TestPostCategory(TestCase):
@@ -24,7 +25,7 @@ class TestPostList(TestCase):
             password='testpass',
         )
         self.user.save()
-    
+
     def test_post_list(self):
         test_response = self.client.get('/posts/')
         self.assertEqual(test_response.status_code, 404, 'created on')
@@ -95,18 +96,18 @@ class TestPostDelete(TestCase):
         self.assertEqual(test_response.status_code, 404)
         self.assertEqual(post.delete(), (1, {'news.Post': 1}))
         self.assertFalse('news/post_detail.html' in test_response.context)
-            
 
-class TestCommentApproval(TestCase):    
+
+class TestCommentApproval(TestCase):
     def test_get(self):
         pass
 
 
-class TestUserProfile(TestCase):    
+class TestUserProfile(TestCase):
     def test_get(self):
         pass
 
 
-class TestUserAdmin(TestCase):    
+class TestUserAdmin(TestCase):
     def test_get(self):
         pass
