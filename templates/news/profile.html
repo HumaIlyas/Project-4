@@ -1,8 +1,9 @@
 {% extends "news/base.html" %}
 
+<!-- Block content for user profile page -->
 {% block content %}
 
-<!-- User Profile -->
+<!-- User profile -->
 <div id="message-text">
     <div class="alert alert-info" role="alert">
         <p>Username: {{ user.username }}</p>
@@ -10,4 +11,4 @@
     </div>
 </div>
 
-{% endblock %}
+{% endblock content %}

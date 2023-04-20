@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html class="h-100">
-
+<!-- Head -->
 <head>
     <title>World News</title>
 
@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-light light-bg">
         <div class="container-fluid">
 
-            <!-- logo -->
+            <!-- Logo -->
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img id="logo" src="/static/images/globe.jpg" alt="logo">
             </a>
@@ -60,7 +60,7 @@
                         </ul>                        
                     </li>
 
-                    <!-- Access to admin panel -->
+                    <!-- Access to the admin panel -->
                     {% if user.is_superuser %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'admin' %}">Admin</a>
@@ -87,6 +87,7 @@
         </div>
     </nav>
 
+    <!-- Messages -->
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -100,6 +101,7 @@
         </div>
     </div>
 
+    <!-- Block for content in other html files -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content will come here -->
@@ -131,9 +133,9 @@
     </footer>
 
     <!-- Javascript to set timeout function for the messages to disappear after some time -->
-    <script src="/static/js/script.js"></script>
+    <script src="/static/scripts/message.js"></script>
 
-    <!-- font awesome script -->
+    <!-- Font awesome script -->
     <script src="https://kit.fontawesome.com/6740ff33ae.js" crossorigin="anonymous"></script>
 
 </body>

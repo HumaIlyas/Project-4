@@ -5,6 +5,7 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
+<!-- Block content for Sign In page -->
 {% block content %}
 
 <div class="container">
@@ -20,6 +21,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Form to Sign In -->
     <div class="row">
         <div class="col-md-4 mt-3 offset-md-2">
             <form class="form" method="POST" action="{% url 'account_login' %}">
@@ -33,4 +36,5 @@
         </div>
     </div>
 </div>
-{% endblock %}
+
+{% endblock content %}
