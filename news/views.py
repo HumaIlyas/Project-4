@@ -10,7 +10,8 @@ from .forms import CommentForm
 class PostCategory(View):
 
     def get(self, request, *args, **kwargs):
-        queryset = list(Post.objects.filter(category__category=kwargs['category'].title()))
+        queryset = list(Post.objects.filter(
+            category__category=kwargs['category'].title()))
         context = {
             "post_list": queryset
         }

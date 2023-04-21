@@ -19,7 +19,8 @@ class Post(models.Model):
     category = models.ForeignKey(Category, null=True, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name="news_posts")
+    author = models.ForeignKey(
+        User, null=True, on_delete=models.CASCADE, related_name="news_posts")
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     content = models.TextField()
@@ -39,7 +40,8 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     comment = models.TextField()
