@@ -585,6 +585,38 @@ I adjusted this issue:
 * Icons of comments, messages, & trash-can at the news post displayed with text-decoration.<br>
 I adjusted this issue:
    * By changing the style of anchor tag: a {text-decoration: none;}
+ 
+### Validation of JavaScript in message.js 
+Some issues appeared during validation of JavaScript in message.js with the official [JSHint JavaScript Validator](https://jshint.com/)
+* There were two warnings:<br>
+   (1) Line 5: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)<br>
+   (2) Line 6: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)<br>
+I adjusted this issue:
+   * By Enabling New JavaScript features (ES6) in CONFIGURE<br>
+* There was one undefined variable<br>
+   (1) Line 5: bootstrap<br>
+I adjusted this issue:
+   * By adding /* global bootstrap */ above the code in message.js
+
+### Validation of python code in settings.py
+Some issues appeared during validation of python code in settings.py with the official [PEP8 online validator](http://pep8ci.herokuapp.com/#)
+* Some lines were too long<br>
+   (1) Line 119: E501 line too long (91 > 79 characters)<br>
+   (2) Line 122: E501 line too long (81 > 79 characters)<br>
+   (3) Line 125: E501 line too long (82 > 79 characters)<br>
+   (4) Line 128: E501 line too long (83 > 79 characters)<br>
+   (5) Line 151: E501 line too long (80 > 79 characters)<br>
+I adjusted this issue:<br>
+   * By adding ( ) around the line and break the line in the form of string by adding ' '<br>
+   For example:<br>
+   {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',<br>
+    },<br>
+    was written as:<br>
+    {
+        'NAME': ('django.contrib.auth.password_validation'<br>
+                 '.UserAttributeSimilarityValidator'),
+    }, 
 
 ## Unfixed bugs
 * No unfixed bugs
