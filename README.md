@@ -391,12 +391,6 @@ Test results of views
     <img src="static/images/test-views.jpg" alt="Test views">
 </div>
 
-### JavaScript testing with Jest
-Jest was done to test the functionality of alert messages to close after sometime. Test pass.
-<div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/test-messages.jpg" alt="Test messages">
-</div>
-
 ## Manual testing
 
 ### Testing User Stories
