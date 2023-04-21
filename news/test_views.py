@@ -3,8 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.models import User
 from .models import Category, Post, Comment
 from .forms import CommentForm
-from .views import PostCategory, PostList, PostDetail, PostLike,
-PostDelete, CommentApproval, UserProfile, UserAdmin
+from .views import PostCategory, PostList, PostDetail, PostLike, PostDelete, CommentApproval, UserProfile, UserAdmin
 
 
 class TestPostCategory(TestCase):
