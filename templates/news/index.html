@@ -20,10 +20,10 @@
                                 {% if "placeholder" in post.featured_image.url %}
                                 <a href="{% url 'category' %}">
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="Text">
+                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="World News">
                                 </a>
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Text">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="World News">
                                 {% endif %}
 
                                 <!-- Post author -->
