@@ -64,6 +64,10 @@ body {
     margin: 5px;
 }
 
+.width {
+    width: 100%;
+}
+
 .post-link {
     text-decoration: none;
     color: #052241;
