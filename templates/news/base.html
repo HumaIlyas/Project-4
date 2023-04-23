@@ -28,7 +28,7 @@
 
             <!-- Logo -->
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img id="logo" src="/static/images/globe.jpg" alt="logo">
+                <img id="logo" src="{% static 'images/globe.jpg' %}" alt="logo">
             </a>
             
             <!-- Website name -->
@@ -133,7 +133,7 @@
     </footer>
 
     <!-- Javascript to set timeout function for the messages to disappear after some time -->
-    <script src="/static/scripts/message.js"></script>
+    <script src="{% static 'scripts/message.js' %}"></script>
 
     <!-- Font awesome script -->
     <script src="https://kit.fontawesome.com/6740ff33ae.js" crossorigin="anonymous"></script>
