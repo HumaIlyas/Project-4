@@ -95,12 +95,12 @@ The main goals of the website user are
 
 ### Colors
 Main colours used in the development of World News:
-* background color: #F9FAFC; #fff; #75dcdc; #f8f9fb; #23BBBB; 
-* font color: #171719; #d14111; #171719; white; lightgray; #171719; #fff; #d6e2e2;
-* link color: #052241; #13355b; #0a9292;
-* link hover color: #481404; #97250e; rgb(109, 10, 10)
-* button color: #138197; #585655; 
-* button hover color: #094c59; #363534;
+* background color: #F9FAFC; #fff; #75dcdc; #f8f9fb; transparent; #23BBBB; rgb(247, 238, 238); rgb(238, 205, 205); #13355b; rgba(246, 224, 224, 0.8); #fff3cd
+* font color: #171719; #d14111; white; #052241; #481404; rgb(109, 10, 10); rgb(78, 6, 6); lightgray; #171719; #fff; #d6e2e2; #0a1392; #664d03; #585655; #363534 
+* link color: #052241; rgb(109, 10, 10); #0a1392
+* link hover color: #481404; rgb(78, 6, 6); rgb(109, 10, 10)
+* button color: #585655; #fff
+* button hover color: #363534; #d6e2e2
 * social networks: rgb(109, 10, 10)
 
 ### Fonts 
@@ -585,6 +585,15 @@ I adjusted this issue:
 * Icons of comments, messages, & trash-can at the news post displayed with text-decoration.<br>
 I adjusted this issue:
    * By changing the style of anchor tag: a {text-decoration: none;}
+
+### Validation of html code in post_detail.html
+One issue appeared during validation of html code in post_detail.html with the official [W3C HTML Validator](https://validator.w3.org/) 
+* The last paragraph in the post content section of all the posts shows an error in the post detail page:<br>
+   (1) No 'p' element in scope but a 'p' end tag seen.<br>
+I adjusted this issue:
+   * By deleting the 'p' end tag, then there was no error and the following message was shown.<br>
+   (1) Document checking completed. No errors or warnings to show.<br>
+* However, this 'p' end tag is needed because there is also 'p' start tag for this 'p' end tag. Therefor, I kept this 'p' end tag in the last paragraph of post content section.
  
 ### Validation of JavaScript in message.js 
 Some issues appeared during validation of JavaScript in message.js with the official [JSHint JavaScript Validator](https://jshint.com/)
@@ -619,7 +628,15 @@ I adjusted this issue:<br>
     }, 
 
 ## Unfixed bugs
-* No unfixed bugs
+There is one unfixed bug. 
+### Validation of html code in post_detail.html
+One issue appeared during validation of html code in post_detail.html with the official [W3C HTML Validator](https://validator.w3.org/) 
+* The last paragraph in the post content section of all the posts shows an error in the post detail page:<br>
+   (1) No 'p' element in scope but a 'p' end tag seen.<br>
+I adjusted this issue:
+   * By deleting the 'p' end tag, then there was no error and the following message was shown.<br>
+   (1) Document checking completed. No errors or warnings to show.<br>
+* However, this 'p' end tag is needed because there is also 'p' start tag for this 'p' end tag. Therefor, I kept this 'p' end tag in the last paragraph of post content section.
 
 [Back to Table of contents](#table-of-contents)
 
