@@ -569,7 +569,7 @@ Forms on the front end for either admin or regular users with **CRUD functionali
 ### Navigation link for logo
 * Logo of World News was not shown while opening the pages of profile, news categories, register, sign in, and sign out.<br>
 I adjusted this issue:
-   * By adding the "/" at the start of the link before static: src="/static/images/globe.jpg"  
+   * By writing the link for the images file as: src="{% static 'images/globe.jpg' %}"  
 
 ### Navigation link for news categories
 * The list of different categories of news was opened at the side on the page instead of below the news categories navigation link.<br>
@@ -579,7 +579,7 @@ I adjusted this issue:
 ### Link to JavaScript file
 * JavaScript file was added for some messages (with id="msg") to disappear after 3 seconds. Messages did not disappear.<br>
 I adjusted this issue:
-   * By adding the "/" at the start of the link before static: src="/static/js/script.js"
+   * By writing the link for the scripts file as: src="{% static 'scripts/message.js' %}"
 
 ### Icons with text-decoration
 * Icons of comments, messages, & trash-can at the news post displayed with text-decoration.<br>
