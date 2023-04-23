@@ -617,11 +617,11 @@ Some issues appeared during validation of python code in settings.py with the of
    (5) Line 151: E501 line too long (80 > 79 characters)<br>
 I adjusted this issue:<br>
    * By adding ( ) around the line and break the line in the form of string by adding ' '<br>
-   For example:<br>
+   For example, the line was written as:<br>
    {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',<br>
     },<br>
-    was written as:<br>
+    The line is now written as:<br>
     {
         'NAME': ('django.contrib.auth.password_validation'<br>
                  '.UserAttributeSimilarityValidator'),

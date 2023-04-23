@@ -3,6 +3,7 @@
 /* body */
 body {
     background-color: #F9FAFC;
+    overflow-x: hidden;
 }
 
 /* background colors */
@@ -274,20 +275,14 @@ a {
     border: none;
 }
 
-#message-text {
+.message-text {
+    margin-top: 100px;
     text-align: center;
-    width: 500px;
-    height: 100px;
-    padding: 20px;
-    bottom: 500px;
-    left: 500px;
-    position: absolute;
 }
 
 #message {
     text-align: center;
 }
-
 
 /* footer */
 .social-networks > li {
@@ -297,4 +292,28 @@ a {
 .social-networks i {
     font-size: 100%;
     color: rgb(109, 10, 10);
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Post like */
+    .col-1 {
+        flex: 0 0 auto;
+        width: 12%;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 480px
+*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* Post like */
+    .col-1 {
+        flex: 0 0 auto;
+        width: 22%;
+    }
 }
