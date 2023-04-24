@@ -1,3 +1,8 @@
+/* Media queries */
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
 
 /* body */
@@ -295,6 +300,61 @@ a {
 }
 
 /* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* post details */
+    .head {
+        height: 40vh;
+    }
+
+    .d-md-block {
+        display: none!important;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .post-title {
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Post like */
+    .col-1 {
+        flex: 0 0 auto;
+        width: 12%;
+    }
+
+    /* post details */
+    .head {
+        height: 35vh;
+    }
+
+    .d-md-block {
+        display: none!important;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .post-title {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* 
   ##Device = Tablets, Ipads (landscape)
   ##Screen = B/w 768px to 1024px
 */
@@ -303,6 +363,56 @@ a {
     .col-1 {
         flex: 0 0 auto;
         width: 12%;
+    }
+    
+    /* post details */
+    .head {
+        height: 35vh;
+    }
+
+    .d-md-block {
+        display: none!important;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .post-title {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* Post like */
+    .col-1 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+
+    /* post details */
+    .head {
+        height: 35vh;
+    }
+
+    .d-md-block {
+        display: none!important;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .post-title {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 
@@ -315,5 +425,24 @@ a {
     .col-1 {
         flex: 0 0 auto;
         width: 22%;
+    }
+
+    /* post details */
+    .head {
+        height: 30vh;
+    }
+
+    .d-md-block {
+        display: none!important;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .post-title {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
