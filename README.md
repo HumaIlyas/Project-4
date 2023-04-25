@@ -41,11 +41,12 @@ ___
     - [Automated testing](#automated-testing)
         - [Code validation](#code-validation)
         - [Performance testing](#performance-testing)
+        - [Running python testing](#running-python-testing)
     - [Manual testing](#manual-testing)
-      - [Testing User Stories](#testing-user-stories)
-      - [Full Testing](#full-testing)
-    - [Compatibility testing](#compatibility-testing)
-    - [Functionality testing](#functionality-testing)
+        - [Testing User Stories](#testing-user-stories)
+        - [Full Testing](#full-testing)
+            - [Compatibility testing](#compatibility-testing)
+            - [Functionality testing](#functionality-testing)
     - [Issues found during site development](#issues-found-during-site-development)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -359,7 +360,7 @@ The automated testing includes all the testing that is carried out by a program.
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool was used to check the performance of the website.
 * Couple of changes were made to improve the performance.
 
-### Final results
+#### Final results
 * The colors and fonts chosen are easy to read and accessible on desktop. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/accessibility-desktop.jpg" alt="Accessibility on desktop">
