@@ -3,7 +3,7 @@ Create Admin panel for the admin of worldnews project to manage the posts.
 Create admin for Category model to categorize the posts.
 Create admin for Post model to draft a post.
 Creat admin for Comment model to comment on a post as well as
-approve/disapprove the offensive comments.
+approve/disapprove the objectionable comments.
 """
 
 from django.contrib import admin
@@ -38,7 +38,7 @@ class PostAdmin(SummernoteModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     """
     This is a class to create admin for Comment model to comment
-    on a post as well as approve/disapprove the offensive comments.
+    on a post as well as approve/disapprove the objectionable comments.
     """
     list_display = ('name', 'comment', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')

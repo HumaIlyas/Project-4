@@ -1,5 +1,5 @@
 # World News
-World News is a site for users who are interested in reading news of different categories. World News will keep them aware about the happenings around the world. The goal of the site is provide a platform to the users for discussion while commenting and liking or unliknig the news. 
+World News is a site for users who are interested in reading news of different categories. World News will keep them aware about the happenings around the world. The goal of the site is provide a platform to the users for discussion while commenting and liking or unliking the news. 
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="static/images/different-screen-sizes.jpg" alt="Website on different screen sizes">
 </div>
@@ -140,28 +140,28 @@ The full responsive navigation bar is featured on all the pages to allow for eas
 
 * When admin or other users are not sign in, the links to the Home, News categories, Register, and Sign In will be shown.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/nav-bar1.jpg" alt="navigation bar">
+    <img src="static/images/nav-bar1.jpg" alt="Navigation bar">
 </div>
 
 * When admin will sign in, the links to the Home, News categories, Admin, Profile, and Sign Out will be shown.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/nav-bar2.jpg" alt="navigation bar">
+    <img src="static/images/nav-bar2.jpg" alt="Navigation bar">
 </div>
 
 * When other users will sign in, the links to the Home, News categories, Profile, and Sign Out will be shown.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/nav-bar3.jpg" alt="navigation bar">
+    <img src="static/images/nav-bar3.jpg" alt="Navigation bar">
 </div>
 
 * Different categories of news such as sports, worklife, climate, science, environment, and business will appear on their respective pages. The user can click on the news categories dropdown button to have access to different categories of news. Dropdown button will direct the user to the titles of different categories of news.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/nav-bar4.jpg" alt="Home page">
+    <img src="static/images/nav-bar4.jpg" alt="Navigation bar">
 </div>
 
 ## Site pagination
 Site pagination is consistent on all pages and includes links to access the next or previous page of the World News.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/site-pagination.jpg" alt="Footer">
+    <img src="static/images/site-pagination.jpg" alt="Site pagination">
 </div>
 
 ## Footer
@@ -251,7 +251,7 @@ Admin can have direct access to admin panel after sign in.
 ## Profile
 Admin and other users can have access to their profile after sign in.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="static/images/profile-page.jpg" alt="Profile">
+    <img src="static/images/profile-page.jpg" alt="Profile page">
 </div>
 
 ## Like/Unlike a news post 
@@ -278,7 +278,7 @@ The message of successful submission of comment and needs approval message will 
 </div>
 
 ## Comments need/do not need approval message for admin
-On the home page (frontend) admin can check the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve.
+On the home page (front end) admin can check the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve.
 
 * Comments need approval message
 <div style="margin-top: 20px; margin-bottom: 20px;">
@@ -400,10 +400,10 @@ World News website is meeting the needs of the [User stories](#user-stories) as 
 | Goals | Steps to achieve them |
 | :--- | :--- |
 | Manage posts | The site owner can create, read, update, and delete posts after login to admin account to manage the news content. The post model is created with the functions to create, read, update, and delete posts. |
-| Categorize a post | In the navigation bar is a link to news categories. After clicking on that link, a list of categories will be opened for the site user/site ownner to select the list of the news posts according to their category of interest. The category model is created with the functions to select the post category. |
+| Categorize a post | In the navigation bar is a link to news categories. After clicking on that link, a list of categories will be opened for the site user/site owner to select the titles of different categories of news and have access to list of the news posts according to their category of interest. The category model is created with the functions to select the post category. |
 | Create draft posts | The site owner can create draft posts after login to admin account. The post model is created with the functions to create draft news and leave the contents to publish them later on. |
 | View likes | Under each post, the total number of likes are shown on the home page, and on the pages for individaul categories of news posts so that site user/site owner can see which is the most popular or viral news these days. |
-| View comments | Under each post, the total number of comments are shown on th home page. However, to see the list of the approved comments, the site user should open the detail of the news post by clicking on the tilte of the post; so that site user can read the conversation among the community. Under the details of the news post, on left side is the list of the comments and on the right side is the comment box to leave the comment. |
+| View comments | Under each post, the total number of comments are shown on th home page. However, to see the list of the approved comments, the site user should open the detail of the news post by clicking on the title of the post; so that site user can read the conversation among the community. Under the details of the news post, on left side is the list of the comments and on the right side is the comment box to leave the comment. |
 | Approve comments | The site owner can approve or disapprove comments on each post to filter out the objectionable comments after login to admin account. The comment model is created with the functions to approve or disapprove comments. The approved comments will be shown on the post detail page. |
 
 #### **As a site user**
@@ -516,7 +516,7 @@ Chrome developer tools were used throughout the project for testing and solving 
 #### **Delete a news post**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Delete a news post | User/author should be able see icon of trash-can on their own news post after sign in. Author of a news post can delete his/her own post; however, admin should be able see icon of trash-can on all posts after sign in and can delete any of the news post | Clicked the icon of trash-can on the post | Post deleted | Pass | 
+| Delete a news post | User/author should be able to see icon of trash-can on their own news post after sign in. Author of a news post can delete his/her own post; however, admin should be able to see icon of trash-can on all posts after sign in and can delete any of the news post | Clicked the icon of trash-can on the post | Post deleted | Pass | 
 
 #### **Registration**
 Forms on the front end for either admin or regular users with **CRUD functionality** without having to access the admin panel.
@@ -558,10 +558,14 @@ Forms on the front end for either admin or regular users with **CRUD functionali
 | --- | --- | --- | --- | --- |
 | Sign In message | Success message after sign in  | Clicked on sign in button after input of username and password | Success message of sign in appeared | Pass |
 | Sign Out message | Message after sign out | Clicked on sign out button | Message of sign out appeared | Pass |
-| Messages disappear | Messages about sign in and sign out will disappear after 3 seconds | Tried to sign in and sign out | Messages disappeared after 3 seconds | Pass |
-| Error/warning messages on registration & Sign In form | Error messages should appear about username and/or email already in use; password is too short or similar to username; and password should be same on registration form. Error message should appear that username and/or email not correct;| Tried to register and sign in with these errors | Error messages appeared | Pass |
+| Error/warning messages on Registration & Sign In form | Error messages should appear about username and/or email already in use; password is too short or similar to username; and password should be same on registration form. Error message should appear that username and/or email not correct;| Tried to register and sign in with these errors | Error messages appeared | Pass |
 | Comment submission and needs approval message| User should be able to see the message that their submission needs approval on post detail page | Comment was submitted | Message appeared that comment is submitted and awaiting approval | Pass |
 | Comment needs/do not need approval message for the admin | After sign in admin should be able to see the message on each post by clicking on the icon of message, whether the comments on a news post need approval or currently there are no comments to approve | Clicked the icon of message | Message appeared that whether the comments on a news post need approval or currently there are no comments to approve | Pass |
+
+#### **Messages disappear self after some time**
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Messages about sign in & sign out disappear after some time | Messages about sign in and sign out will disappear after 3 seconds because of setTimeout function in message.js (JavaScript) for the messages to disappear after 3 seconds | Tried to sign in and sign out | Messages disappeared after 3 seconds | Pass |
 
 ---
 
@@ -588,7 +592,7 @@ I adjusted this issue:
 
 ### Validation of html code in post_detail.html
 One issue appeared during validation of html code in post_detail.html with the official [W3C HTML Validator](https://validator.w3.org/) 
-* The last paragraph in the post content section of all the posts shows an error in the post detail page:<br>
+* The last paragraph in the post content section of all the posts shows following error in the post detail page:<br>
    (1) No 'p' element in scope but a 'p' end tag seen.<br>
 I adjusted this issue:
    * By deleting the 'p' end tag, then there was no error and the following message was shown.<br>
@@ -631,7 +635,7 @@ I adjusted this issue:<br>
 There is one unfixed bug. 
 ### Validation of html code in post_detail.html
 One issue appeared during validation of html code in post_detail.html with the official [W3C HTML Validator](https://validator.w3.org/) 
-* The last paragraph in the post content section of all the posts shows an error in the post detail page:<br>
+* The last paragraph in the post content section of all the posts shows following error in the post detail page:<br>
    (1) No 'p' element in scope but a 'p' end tag seen.<br>
 I adjusted this issue:
    * By deleting the 'p' end tag, then there was no error and the following message was shown.<br>
@@ -674,12 +678,13 @@ To complete the contents of World News website, I learned coding and collected t
   * [HTML & CSS Coding Best Practices](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
   * [Documenting Python Code](https://realpython.com/documenting-python-code/)
 * The description on the DjangoBlog provided by the tutor of the Code Institute with [DjangoBlog](https://codestar2021.herokuapp.com/) was useful as well as an inspiration to design World News.
+* I acknowledge all the tutors at [Tutor Assistance](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor) for their guidance to complete World News.
 * I acknowledge [Adegbenga Adeye](https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/) for mentor support and finishing touches.
 
 ## Content
 * The details about the news were found at [BBC](https://www.bbc.com/news) and [CNN](https://edition.cnn.com/).
-* The icons used in the World News comments and likes section, and social links were taken from [Font Awesome](https://fontawesome.com/)
-* The code to make the social networks links was taken from [Project: Yoga For Self-Improvement](https://github.com/HumaIlyas/Project-1)
+* The icons used in the World News comments and likes section, for delete the post, messages for the admin, and social links were taken from [Font Awesome](https://fontawesome.com/)
+* Some of the code to make the social networks links was taken from [Project: Yoga For Self-Improvement](https://github.com/HumaIlyas/Project-1) and [DjangoBlog](https://codestar2021.herokuapp.com/)
 
 ## Media
-* The images used on the Home and News Categories pages were taken from [Google Images](https://images.google.nl/)
+* The images used on the Home and News Categories pages for logo and news posts were taken from [Google Images](https://images.google.nl/)
