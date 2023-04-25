@@ -1,5 +1,5 @@
 """
-To do Django testing of Models created for worldnews to
+To do Django testing of Models created for worldnews project to
 manage the posts.
 """
 
@@ -12,7 +12,13 @@ import datetime
 
 
 class TestCategory(TestCase):
+    """
+    This is a class to test Category model.
+    """
     def test_created_on(self):
+        """
+        To test the date when the category is created.
+        """
         mocked = datetime.datetime(2023, 3, 3, 0, 0, 0, tzinfo=pytz.utc)
         with mock.patch('django.utils.timezone.now', mock.Mock(
                 return_value=mocked)):
@@ -21,9 +27,12 @@ class TestCategory(TestCase):
 
 
 class TestPost(TestCase):
+    """
+    This is a class to test Post model.
+    """
     def setUp(self):
         """
-        Setup for testing
+        Setup for testing.
         """
         self.user = User.objects.create_user(
             username='test user',
@@ -39,7 +48,7 @@ class TestPost(TestCase):
 
     def test_post(self):
         """
-        testing post model
+        To test Post model.
         """
         post = Post.objects.create(
             category=self.category,
@@ -65,6 +74,9 @@ class TestPost(TestCase):
         self.assertEqual(post.likes.count(), 1)
 
     def test_created_on(self):
+        """
+        To test the date when the post is created.
+        """
         mocked = datetime.datetime(2023, 3, 3, 0, 0, 0, tzinfo=pytz.utc)
         with mock.patch('django.utils.timezone.now', mock.Mock(
                 return_value=mocked)):
@@ -72,6 +84,9 @@ class TestPost(TestCase):
             self.assertEqual(post.created_on, mocked)
 
     def test_updated_on(self):
+        """
+        To test the date when the post is updated.
+        """
         mocked = datetime.datetime(2023, 3, 3, 0, 0, 0, tzinfo=pytz.utc)
         with mock.patch('django.utils.timezone.now', mock.Mock(
                 return_value=mocked)):
@@ -79,14 +94,21 @@ class TestPost(TestCase):
             self.assertEqual(post.updated_on, mocked)
 
     def test_ordering_post_metaclass(self):
+        """
+        To test if the posts are dispalyed according to descending order
+        of their created date.
+        """
         post = Post.objects.create(title='Test post', slug='test-post')
         self.assertEqual(post._meta.ordering[0], '-created_on')
 
 
 class TestComment(TestCase):
+    """
+    This is a class to test Comment model.
+    """
     def setUp(self):
         """
-        Setup for testing
+        Setup for testing.
         """
         self.user = User.objects.create_user(
             username='test user',
@@ -102,7 +124,7 @@ class TestComment(TestCase):
 
     def test_comment(self):
         """
-        testing comment model
+        To test Comment model.
         """
         comment = Comment.objects.create(
             post=self.post,
@@ -118,6 +140,9 @@ class TestComment(TestCase):
         self.assertEqual(str(comment.approved), 'False')
 
     def test_created_on(self):
+        """
+        To test the date when the comment is created.
+        """
         mocked = datetime.datetime(2023, 3, 3, 0, 0, 0, tzinfo=pytz.utc)
         with mock.patch('django.utils.timezone.now', mock.Mock(
                 return_value=mocked)):
@@ -125,5 +150,9 @@ class TestComment(TestCase):
             self.assertEqual(comment.created_on, mocked)
 
     def test_ordering_comment_metaclass(self):
+        """
+        To test if the comments are dispalyed according to ascending order
+        of their created date.
+        """
         comment = Comment.objects.create(post=self.post)
         self.assertEqual(comment._meta.ordering[0], 'created_on')

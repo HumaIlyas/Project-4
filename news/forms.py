@@ -8,6 +8,9 @@ from .models import Comment
 
 
 class CommentForm(forms.ModelForm):
+    """
+    This is a class to create a form to comment on a post.
+    """
     class Meta:
         model = Comment
         fields = ['comment', ]

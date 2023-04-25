@@ -14,8 +14,13 @@ from .forms import CommentForm
 
 
 class PostCategory(View):
-
+    """
+    This is a class to create view for post category.
+    """
     def get(self, request, *args, **kwargs):
+        """
+        To return the posts of same category on the home page.
+        """
         queryset = list(Post.objects.filter(
             category__category=kwargs['category'].title()))
         context = {
@@ -25,6 +30,9 @@ class PostCategory(View):
 
 
 class PostList(generic.ListView):
+    """
+    This is a class to create view for post list on the home page.
+    """
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "news/index.html"
@@ -32,8 +40,13 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
-
+    """
+    This is a class to create view for post detail.
+    """
     def get(self, request, slug, *args, **kwargs):
+        """
+        To return the posts detail on the post detail page.
+        """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("created_on")
@@ -51,7 +64,10 @@ class PostDetail(View):
         return render(request, "news/post_detail.html", context)
 
     def post(self, request, slug, *args, **kwargs):
-
+        """
+        To return the posts detail on the post detail page
+        and allows user to like and comment on a post after sign in.
+        """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("created_on")
@@ -80,8 +96,13 @@ class PostDetail(View):
 
 
 class PostLike(View):
-
+    """
+    This is a class to create view for post like.
+    """
     def post(self, request, slug, *args, **kwargs):
+        """
+        To return the count of number of likes on the post.
+        """
         post = get_object_or_404(Post, slug=slug)
 
         if post.likes.filter(id=request.user.id).exists():
@@ -93,8 +114,14 @@ class PostLike(View):
 
 
 class PostDelete(View):
-
+    """
+    This is a class to create view for post delete option on the home page.
+    """
     def get(self, request, slug, *args, **kwargs):
+        """
+        To return the post delete option for post authors for their own posts
+        and superuser for all the posts.
+        """
         post = get_object_or_404(Post, slug=slug)
         if request.user.is_superuser or request.user == post.author:
             post.delete()
@@ -105,8 +132,14 @@ class PostDelete(View):
 
 
 class CommentApproval(View):
-
+    """
+    This is a class to create view for comments need or do not need
+    approval message for the admin.
+    """
     def get(self, request, slug, *args, **kwargs):
+        """
+        To return message for the admin if comments need or do not need approval on each post.
+        """
         post = get_object_or_404(Post, slug=slug)
         if post.comments.filter(approved=False).exists():
             if request.user.is_superuser:
@@ -116,12 +149,25 @@ class CommentApproval(View):
 
 
 class UserProfile(View):
+    """
+    This is a class to create view for user profile on profile page.
+    """
     def get(self, request):
+        """
+        To return profile of user after sign in.
+        """
         if request.user.is_authenticated:
             return render(request, "news/profile.html")
 
 
 class UserAdmin(View):
+    """
+    This is a class to create view for the admin to access admin panel
+    with the link provided on the admin page.
+    """
     def get(request):
+        """
+        To return admin panel for admin after sign in.
+        """
         if request.user.is_superuser:
             return render(request, "news/admin.html")
