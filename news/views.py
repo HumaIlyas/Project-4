@@ -1,5 +1,5 @@
 """
-Create Views for worldnews to view the posts based on Category,
+Create Views for worldnews project to view the posts based on Category,
 Post, and Comment models for PostCategory, PostList, PostDetail,
 PostLike, PostDelete, CommentApproval, UserProfile, and UserAdmin.
 """
@@ -45,7 +45,8 @@ class PostDetail(View):
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        To return the posts detail on the post detail page.
+        To return the posts detail on the post detail page
+        and allows the user to like the post after sign in.
         """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -66,7 +67,7 @@ class PostDetail(View):
     def post(self, request, slug, *args, **kwargs):
         """
         To return the posts detail on the post detail page
-        and allows user to like and comment on a post after sign in.
+        and allows the user to like and comment on a post after sign in.
         """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -97,11 +98,11 @@ class PostDetail(View):
 
 class PostLike(View):
     """
-    This is a class to create view for post like.
+    This is a class to create view for number of likes on the post.
     """
     def post(self, request, slug, *args, **kwargs):
         """
-        To return the count of number of likes on the post.
+        To return the count of number of likes on the post on post detail page.
         """
         post = get_object_or_404(Post, slug=slug)
 
@@ -119,8 +120,8 @@ class PostDelete(View):
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        To return the post delete option for post authors for their own posts
-        and superuser for all the posts.
+        To return the post delete option for post authors to
+        delete their own posts and superuser to delete all the posts.
         """
         post = get_object_or_404(Post, slug=slug)
         if request.user.is_superuser or request.user == post.author:
@@ -138,7 +139,8 @@ class CommentApproval(View):
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        To return message for the admin if comments need or do not need approval on each post.
+        To return message for the admin if comments need or
+        do not need approval on each post.
         """
         post = get_object_or_404(Post, slug=slug)
         if post.comments.filter(approved=False).exists():
@@ -162,8 +164,9 @@ class UserProfile(View):
 
 class UserAdmin(View):
     """
-    This is a class to create view for the admin to access admin panel
-    with the link provided on the admin page.
+    This is a class to create view for the admin to access admin panel with
+    the link to the admin provided on the admin page and navigation bar
+    of Admin on the home page.
     """
     def get(request):
         """
