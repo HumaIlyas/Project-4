@@ -1,3 +1,9 @@
+"""
+Create Views for worldnews to view the posts based on Category,
+Post, and Comment models for PostCategory, PostList, PostDetail,
+PostLike, PostDelete, CommentApproval, UserProfile, and UserAdmin.
+"""
+
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.core.exceptions import PermissionDenied

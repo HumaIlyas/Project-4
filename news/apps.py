@@ -1,3 +1,7 @@
+"""
+App name for the worldnews project.
+"""
+
 from django.apps import AppConfig
 
 

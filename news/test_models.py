@@ -1,3 +1,8 @@
+"""
+To do Django testing of Models created for worldnews to
+manage the posts.
+"""
+
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Category, Post, Comment

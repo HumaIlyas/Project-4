@@ -1,3 +1,7 @@
+"""
+urlpatterns for paths to view the posts.
+"""
+
 from . import views
 from django.urls import path
 

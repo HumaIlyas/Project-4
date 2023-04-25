@@ -1,9 +1,15 @@
+"""
+To do Django testing of Views created for worldnews to
+view the posts.
+"""
+
 from django.test import TestCase, RequestFactory
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.models import User
 from .models import Category, Post, Comment
 from .forms import CommentForm
-from .views import PostCategory, PostList, PostDetail, PostLike, PostDelete, CommentApproval, UserProfile, UserAdmin
+from .views import (PostCategory, PostList, PostDetail, PostLike,
+                    PostDelete, CommentApproval, UserProfile, UserAdmin)
 
 
 class TestPostCategory(TestCase):
@@ -99,14 +105,24 @@ class TestPostDelete(TestCase):
 
 class TestCommentApproval(TestCase):
     def test_get(self):
-        pass
+        test_response = self.client.get('/posts/')
+        post = Post.objects.create(title='Test post')
+        self.assertEqual(test_response.status_code, 404)
+        self.assertTrue(test_response, 'news/non_approve_comment.html')
+        self.assertTrue(test_response, 'news/approve_comment.html')
 
 
 class TestUserProfile(TestCase):
     def test_get(self):
-        pass
+        test_response = self.client.get('/users/')
+        user = User.objects.create_user(username='Test user')
+        self.assertEqual(test_response.status_code, 404)
+        self.assertTrue(test_response, 'news/profile.html')
 
 
 class TestUserAdmin(TestCase):
     def test_get(self):
-        pass
+        test_response = self.client.get('/users/')
+        user = User.objects.create_user(username='Test user')
+        self.assertEqual(test_response.status_code, 404)
+        self.assertTrue(test_response, 'news/admin.html')

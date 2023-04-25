@@ -1,3 +1,11 @@
+"""
+Create Admin panel for the admin of worldnews to manage the posts.
+Create admin for Category model to categorize the posts.
+Create admin for Post model to draft a post.
+Creat admin for Comment model to comment on a post as well as
+approve/disapprove the offensive comments.
+"""
+
 from django.contrib import admin
 from .models import Category, Post, Comment
 from django_summernote.admin import SummernoteModelAdmin

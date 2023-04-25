@@ -1,3 +1,10 @@
+"""
+Create Models for worldnews to manage the posts.
+Create Category model to categorize the posts.
+Create Post model to draft a post.
+Creat Comment model to comment on a post.
+"""
+
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField

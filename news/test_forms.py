@@ -1,3 +1,8 @@
+"""
+To do Django testing of a form created for the
+site owner/site users to comment on a post.
+"""
+
 from django.test import TestCase
 from .forms import CommentForm
 
