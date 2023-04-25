@@ -238,6 +238,11 @@ a {
     text-decoration: none;
 }
 
+.col-1 {
+    flex: 0 0 auto;
+    width: 10%;
+}
+
 /* post delete */
 .btn-delete {
     color: #585655;
@@ -304,6 +309,12 @@ a {
   ##Screen = B/w 1025px to 1280px
 */
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* Post like */
+    .col-1 {
+        flex: 0 0 auto;
+        width: 12%;
+    }
+
     /* post details */
     .post-title {
         margin-top: 10%;
@@ -320,7 +331,7 @@ a {
     /* Post like */
     .col-1 {
         flex: 0 0 auto;
-        width: 12%;
+        width: 15%;
     }
 
     /* post details */
@@ -348,7 +359,7 @@ a {
     /* Post like */
     .col-1 {
         flex: 0 0 auto;
-        width: 12%;
+        width: 15%;
     }
     
     /* post details */
@@ -404,7 +415,7 @@ a {
     /* Post like */
     .col-1 {
         flex: 0 0 auto;
-        width: 22%;
+        width: 28%;
     }
 
     /* post details */
